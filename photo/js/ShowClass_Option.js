@@ -1,0 +1,1 @@
+document.write("<option value=''>гКохлМ╪сю╦д©</option>");
