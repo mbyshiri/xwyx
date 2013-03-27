@@ -1,1 +1,0 @@
-document.write("<li>没有热门软件</li>");

@@ -1,1 +1,0 @@
-document.write("<p>&nbsp;&nbsp;没有公告</p>");

@@ -1,1 +1,0 @@
-document.write("<li>没有热门文章</li>");
