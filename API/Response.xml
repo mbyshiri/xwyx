@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="gb2312"?>
+<root>
+	<appid>powereasy</appid>
+	<status>0</status>
+	<body>
+		<message>&#25805;&#20316;&#24050;&#25104;&#21151;</message>
+		<password/>
+		<email/>
+        <question/>
+		<answer/>
+		<savecookie/>
+		<truename/>
+		<gender/>
+		<birthday/>
+		<qq/>
+		<msn/>
+		<mobile/>
+		<telephone/>
+		<province/>
+		<city/>
+		<address/>
+		<zipcode/>
+		<homepage/>
+		<userip/>
+		<jointime/>
+		<experience/>
+		<ticket/>
+		<valuation/>
+		<balance/>
+		<posts/>
+		<userstatus/>
+		<sex/>
+	</body>
+</root>
