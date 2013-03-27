@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>显示指定频道专题</title>
+<script language="javascript">
+function objectTag() {
+var reval;
+var IsElite;
+var OpenType;
+
+for (var i=0;i<document.form1.IsElite.length;i++){
+var PowerEasy = document.form1.IsElite[i];
+if (PowerEasy.checked==true)
+    IsElite = PowerEasy.value
+}
+for (var i=0;i<document.form1.OpenType.length;i++){
+var PowerEasy = document.form1.OpenType[i];
+if (PowerEasy.checked==true)
+    OpenType = PowerEasy.value
+}
+reval = '{$ShowSpecialList('+document.form1.ChannelID.value+','+IsElite+','+document.form1.SpecialNum.value+','+document.form1.ShowPropertyType.value+','+OpenType+','+document.form1.Cols.value+')}';
+window.returnValue = reval;
+window.close();
+}
+//=================================================
+//过程名：IsDigit()
+//作  用：输入为数字
+//=================================================
+function IsDigit()
+{
+  return ((event.keyCode >= 48) && (event.keyCode <= 57));
+}
+//-->
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+  <table width="320" width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+    <tr class='title'>
+      <td colspan="2" align="center"><strong>显示指定频道专题：</strong></td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" class='tdbg5'>频道ID：</td>
+      <td>
+        <Input name="ChannelID" type="text" size="10" value="" ONKEYPRESS="javascript:event.returnValue=IsDigit()"></td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" width="40%" class='tdbg5'>是否是推荐专题：</td>
+      <td>
+        <Input type="radio" name="IsElite" value="True" checked> 是
+        <Input type="radio" name="IsElite" value="False" > 否
+      </td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" class='tdbg5'>显示多少个专题名称：</td>
+      <td>
+        <Input name="SpecialNum" type="text" size="20" value=""></td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" class='tdbg5'>专题小图片：</td>
+      <td>
+        <Input name="ShowPropertyType" type="text" size="20" value="0"><br><font color='blue'>显示前的小图标，0为不显示，1为符号，其他为小图片：/images/Special_List*.gif</font></td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" width="40%" class='tdbg5'>打开方式：</td>
+      <td>
+        <Input type="radio" name="OpenType" value="0" checked> 原窗口打开
+        <Input type="radio" name="OpenType" value="1" > 新窗口打开
+      </td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" class='tdbg5'>每行的列数：</td>
+      <td>
+        <Input name="Cols" type="text" size="20" value="0" ONKEYPRESS="javascript:event.returnValue=IsDigit()"></td>
+    </tr>
+    <tr class='tdbg'>
+      <td colspan=2 align='center'>
+        <Input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>

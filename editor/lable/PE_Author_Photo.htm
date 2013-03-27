@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>显示网站作者照片</title>
+<script language="javascript">
+	function objectTag() {
+	var reval;
+	reval = '{$AuthorPhoto('+document.form1.BannerWidth.value+','+document.form1.BannerHeight.value+')}';  
+	window.returnValue = reval;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table  border="0" class='border' cellpadding='2' cellspacing='1' width='100%'>
+  <tr class='title' align='center'>
+    <td colspan="2"><strong>显示网站作者照片标签设置：</strong></td>
+  </tr>
+  <tr class='tdbg'>
+    <td>作者照片宽度：</td>
+    <td>
+    <input name="BannerWidth" type="text" size="6" value="200">px</td>
+  </tr>
+  <tr class='tdbg'>
+    <td>作者照片高度：</td>
+    <td><input name="BannerHeight" type="text" size="6" value="172">px</td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

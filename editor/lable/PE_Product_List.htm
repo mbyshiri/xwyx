@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>显示该厂商或品牌所拥有的商品列表</title>
+<script language="javascript">
+function objectTag() {
+    var strJS,iType;
+	switch(document.form1.iType.selectedIndex)
+    {
+      case 0: iType='1'; break;
+      case 1: iType='2'; break;
+	  case 2: iType='3'; break;
+	}
+	strJS = '{$ShowProductList(';
+	strJS+=iType;
+	strJS+=","+document.form1.IsShowTime.checked;
+	strJS+=","+document.form1.IsShowLink.checked;	
+	strJS+=","+document.form1.iNum.value;	
+	strJS+=","+document.form1.iorder.selectedIndex;
+	strJS+=","+document.form1.iWidth.value;
+	strJS+=","+document.form1.iHeight.value;
+	strJS+=')}';
+	window.returnValue = strJS;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table border="0" class='border' cellpadding='2' cellspacing='1' width='100%'>
+  <tr class=tdbg>
+    <td align=right height=25>显示方式：</td>
+    <td height=25>
+		<Select id=iType name=iType> 
+		  <Option value=1 selected>普通列表</Option> 
+		  <Option value=2>定义列表</Option>
+		  <Option value=3>标准商品显示列表</Option>
+        </Select> 
+	  </td>
+  </tr>
+  <tr class=tdbg>
+    <td align=right height=25>列表属性：</td>
+    <td><Input id="IsShowTime" type="checkbox" value=1 name="IsShowTime">显示发表时间&nbsp;&nbsp;&nbsp;&nbsp;<Input id="IsShowLink" type="checkbox" value=1 name="IsShowLink">显示文章超连接</td>
+  </tr>
+  <tr class=tdbg>
+    <td align=right height=25>商品简介显示字数：</td>
+    <td><input name="iNum" type="text" size="12" value="20"></td>
+  </tr>
+ <tr class=tdbg>
+    <td align=right height=25>排列方式：</td>
+    <td height=25>
+		<Select id=iorder name=iorder> 
+		  <Option value=0 selected>按发表时间正序排列</Option> 
+		  <Option value=1>按发表时间倒序排列</Option>
+		  <Option value=2>按点击次数排序</Option>
+        </Select> 
+	</td>
+  </tr>
+  <tr class=tdbg>
+    <td align=right height=25>缩略图宽度：</td>
+    <td><input name="iWidth"  type="text" size="12" value=""></td>
+  </tr>
+  <tr class=tdbg>
+    <td align=right height=25>缩略图高度：</td>
+    <td><input name="iHeight"  type="text" size="12" value=""></td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
