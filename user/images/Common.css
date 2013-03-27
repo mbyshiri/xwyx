@@ -1,0 +1,311 @@
+@import url( skin0.css );
+		
+		body {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			color: #000;
+			line-height: 160%;
+			text-align:center;
+			background:#9BBB59;
+			padding:20px 0 0 0;
+			background:#f6f6f6 url(bg_bookmail.gif) repeat-x 0 0;
+		}
+
+		input {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			color: #000;
+		}
+
+
+
+.mailListContainer {
+	width:750px;
+	
+	margin:0 auto 0 auto;
+	padding:0 20px 0 20px;
+	text-align:left;
+	background:#fff;
+	border:1px solid #ccc;
+}
+
+.top {
+	float:left;
+	clear:both;
+	width:100%;
+	margin:10px 0 10px 0!important;
+	margin:10px 0 0 0;
+	padding:0 0 4px 0;
+	border-bottom:2px solid #ddd;
+}
+
+#mailList_set {
+	
+	padding:0 10px 0 20px;
+
+
+	
+}
+
+#mailList_set .mailAccount {
+	color: #0882CE;
+	font-weight:bold;
+}
+
+#mailList_set .title {
+	padding: 20px 8% 10px 0;
+	float:left;
+	width:92%;
+
+}
+
+
+
+#mailList_set .title h2 {
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+	margin:0 0 0 0;
+	padding:0 0 6px; 0;
+}
+
+#mailList_set .title p {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+#mailList_set .title .description {
+	color:#999;
+}
+
+#mailList_set .title ul {
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
+}
+
+#mailList_set .listRow {
+
+	
+	padding:13px 0 13px 0;
+	clear:both;
+
+	width:100%;
+
+}
+
+#mailList_set .listRow ul {
+	margin-top:10px!important;
+	margin-top:5px;
+	padding-top:0;
+}
+
+
+#mailList_set .listRow h3 {
+	font-size:14px;
+	line-height:120%;
+
+	color: #000;
+	width:100%;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+#mailList_set .descRecommand {
+	color: #0882CE;
+	line-height:120%;
+	float:left;
+	clear:right;
+
+}
+
+#mailList_set .column {
+	clear:both;
+	width:100%;
+	margin:6px 0 5px 0!important;
+	margin:6px 0 0 0;
+
+	float:left;
+}
+
+#mailList_set dl {
+
+	display:block;
+	float:left;
+	width:320px!important;
+	height:56px;
+	width:320px;
+	margin:0 28px 12px 0;
+	
+
+}
+
+#mailList_set dt {
+
+}
+#mailList_set dt label {
+	font-weight:normal;
+}
+
+#mailList_set label.selected {
+	font-weight:bold;
+}
+
+#mailList_set dd {
+	margin:0 0 0 26px;
+	color:#999;
+	font-size:12px;
+	line-height:140%;
+	
+}
+
+#mailList_set .infoContainer {
+
+	clear:both;
+}
+
+#mailList_set .infoBar {
+	border:1px solid #CCE0F5;
+	background:#F2F7FC url(ico_infobar_msg.gif) no-repeat 8px 11px;
+	padding:11px 0 11px 0;
+	float:left;
+	width:100%;
+}
+
+#mailList_set .infoBarAlert {
+	border:1px solid #ccc;
+	background:#FFF9E3 url(ico_infobar_alert.gif) no-repeat 8px 11px;
+	padding:11px 0 11px 0;
+	float:left;
+	width:100%;
+}
+
+#mailList_set #selectedBookMailList {
+	display:none;
+}
+
+#mailList_set #selectedBookMailList h2 {
+	margin:0 0 0 30px;
+	font-size:14px;
+	line-height:120%;
+}
+
+#mailList_set #selectedBookMailList div {
+	margin:6px 20px 0 30px;
+	line-height:160%;
+}
+
+
+#mailList_set .infoBarAlert div {
+	margin:0 20px 0 30px;
+	line-height:120%;
+	color:#999;
+}
+
+#mailList_set .operation {
+	text-align:center;
+	padding:5px 0 20px 0;
+}
+
+#mailList_set .operation a{
+	margin-left:20px;
+}
+
+#mailList_set input {
+	
+}
+
+#mailList_set .operation input{
+	margin:0 4px 0 4px;
+	padding: 0 8px 0 8px;
+	line-height:120%;
+}
+
+.bot {clear:both;padding:26px 0 20px 0;line-height:22px;text-align:center;color:#888;border-top:1px solid #ddd; font-size:12px;}
+.fontLarge{font-size:14px;}
+.fontSmall{font-size:11px;}
+a {color:#3163c0;}
+
+.beta {
+	float:left;
+	position:absolute;
+	display:block;
+	margin:10px 0 0 144px!important;
+	margin:16px 0 0 114px;
+	color:#999;
+}
+
+.description {
+	clear:both;
+	width:100%;
+	color:#999;
+}
+
+.description h3{
+	font-size:14px;
+	margin:0;
+	padding:0;
+}
+
+.listRow ul{
+	margin-left:0!important;
+	padding-left:24px!important;
+	margin-left:26px;
+	padding-left:0px;
+	font-size:12px;
+}
+
+.extOperate {
+	
+}
+
+.extOperate p {
+	padding:0 0 0 26px;
+	margin:0 0 0 0;
+}
+
+.extOperate p.disabled {
+	color:#999;
+}
+
+.addrtitle {
+	color:#333;
+}
+
+.bookDesc {
+	
+	margin:20px 0 30px 0;
+	padding:20px 0 0 0;
+	color:#666;
+	display:block;
+	border-top:1px dashed #ccc;
+	
+}
+
+.bookDesc ul{
+	list-style-type:disc!important;
+	padding-left:16px;
+	font-size:12px;
+	margin:0 auto 0 auto;
+
+}
+
+.msgx {
+	width:600px;
+}
+
+.infobar {
+			background:#fff9e3;
+			clear:both;
+			border:1px solid #fadc80;
+			line-height:120%;
+			margin:8px auto 16px auto;
+			float:none;
+			padding:10px 10px 7px 10px;
+			text-align:center;
+		}
+
+		.error {
+			color:#c00;
+		}

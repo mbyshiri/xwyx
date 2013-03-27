@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="gb2312"?>
+<body>
+    <baseconfig>
+        <item>
+            <name>AddBlog</name>
+            <sql>select Top 10 A.ID,A.UserID,A.ClassID,A.Name,A.BirthDay,A.Address,A.Tel,A.Fax,A.Company,A.Department,A.ZipCode,A.HomePage,A.Email,A.QQ,A.Intro,A.Photo,A.Passed,A.Type,A.isElite,A.Hits,A.onTop,A.LastUseTime,C.UserName from PE_Space A inner join PE_User C on A.UserID=C.UserID</sql>
+            <sqlwhere>A.Type=1 and A.Passed=PE_True</sqlwhere>
+            <sqlorder>A.LastUseTime desc</sqlorder>
+        </item>
+        <item>
+            <name>NewBlog</name>
+            <sql>select Top 10 A.ID,A.UserID,A.ClassID,A.Name,A.BirthDay,A.Address,A.Tel,A.Fax,A.Company,A.Department,A.ZipCode,A.HomePage,A.Email,A.QQ,A.Intro,A.Photo,A.Passed,A.Type,A.isElite,A.Hits,A.onTop,A.LastUseTime,C.UserName from PE_Space A inner join PE_User C on A.UserID=C.UserID</sql>
+            <sqlwhere>A.Type=1 and A.Passed=PE_True</sqlwhere>
+            <sqlorder>A.LastUseTime desc</sqlorder>
+        </item>
+        <item>
+            <name>EliteBlog</name>
+            <sql>select Top 5 A.ID,A.UserID,A.ClassID,A.Name,A.BirthDay,A.Address,A.Tel,A.Fax,A.Company,A.Department,A.ZipCode,A.HomePage,A.Email,A.QQ,A.Intro,A.Photo,A.Passed,A.Type,A.isElite,A.Hits,A.onTop,A.LastUseTime,C.UserName from PE_Space A inner join PE_User C on A.UserID=C.UserID</sql>
+            <sqlwhere>A.Type=1 and A.Passed=PE_True and A.IsElite=PE_True</sqlwhere>
+            <sqlorder>A.onTopPE_OrderType,A.ID desc</sqlorder>
+        </item>
+        <item>
+            <name>HotBlog</name>
+            <sql>select top 10 A.ID,A.UserID,A.ClassID,A.Name,A.BirthDay,A.Address,A.Tel,A.Fax,A.Company,A.Department,A.ZipCode,A.HomePage,A.Email,A.QQ,A.Intro,A.Photo,A.Passed,A.Type,A.isElite,A.Hits,A.onTop,A.LastUseTime,C.UserName from PE_Space A inner join PE_User C on A.UserID=C.UserID</sql>
+            <sqlwhere>A.Type=1 and A.Passed=PE_True and A.Hits>PE_Hits</sqlwhere>
+            <sqlorder>A.OrderID</sqlorder>
+        </item>
+        <diary>
+            <template>Showdiary.xsl</template>
+            <MaxPerPage>10</MaxPerPage>
+        </diary>
+        <book>
+            <template>Showbook.xsl</template>
+            <MaxPerPage>10</MaxPerPage>
+        </book>
+        <music>
+            <template>Showmusic.xsl</template>
+            <MaxPerPage>10</MaxPerPage>
+        </music>
+        <photo>
+            <template>Showphoto.xsl</template>
+            <MaxPerPage>10</MaxPerPage>
+        </photo>
+        <link>
+            <template>Showlink.xsl</template>
+            <MaxPerPage>10</MaxPerPage>
+        </link>
+    </baseconfig>
+</body>
