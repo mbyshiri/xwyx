@@ -1,0 +1,1 @@
+document.write("<li>ц╩спндуб</li>");
