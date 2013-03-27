@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<script language="javascript">
+function objectTag() {
+    
+	//alert(document.form1.CommandType.length);
+    var iCommandType;
+    for(var i =0; i< document.form1.CommandType.length; i++)
+    {
+        if(document.form1.CommandType[i].checked)
+        {
+            iCommandType = document.form1.CommandType[i].value;
+        }
+    }
+    
+    strJS="{$SupplyInfoType(";
+	strJS+=document.form1.pageType.value;
+    strJS+=","+iCommandType;
+    strJS+=","+document.form1.iCols.value;
+	strJS+=","+document.form1.iLength.value;
+    strJS+=","+document.form1.ShowNum.value;
+	strJS+=","+document.form1.iWidth.value;
+    strJS+=","+document.form1.iHeight.value;
+	strJS+=")}";
+	window.returnValue = strJS;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+<base target="_self">
+</HEAD>
+
+<BODY>
+<form name="form1">
+<table width='100%' border='0' align='center' cellpadding='2' cellspacing='1' class='border'>  
+    <tr class=title>
+      <td align=middle colSpan=3 height=22><STRONG>供求信息列表标签 </STRONG></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>标签类型：</STRONG></td>
+      <td height=25>
+        <SELECT NAME="pageType">
+            <Option value="0">0</Option>
+            <Option value="1">1</Option>
+            <Option value="2">2</Option>
+			<Option value="3">3</Option>
+        </SELECT>
+      </td>
+      <td>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0--最新信息标签&nbsp;1--热点信息标签<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2--推荐信息标签&nbsp;3--最新带图片标签
+      </td>
+    </tr>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>推荐类型：</STRONG></td>
+      <td height=25>
+          <INPUT TYPE="radio" NAME="CommandType" value="0" checked>不推荐<br>
+          <INPUT TYPE="radio" NAME="CommandType" value="1">频道推荐<br>
+          <INPUT TYPE="radio" NAME="CommandType" value="2">栏目推荐<br>
+		  <INPUT TYPE="radio" NAME="CommandType" value="3">所有推荐信息
+      </td>
+      <td></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>显示标题列数：</STRONG></td>
+      <td height=25><INPUT TYPE="text" NAME="iCols" size="4" value="1"></td>
+      <td>
+        <font color=#0000FF>说明：</font>只有标签类型是一行多列时
+      </td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>显示标题长度：</STRONG></td>
+      <td height=25><INPUT TYPE="text" NAME="iLength" size="4" value="100"></td>
+      <td></td>
+    </tr>
+     <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>频道首页显示信息数：</STRONG></td>
+      <td height=25>
+          显示信息数：<INPUT TYPE="text" NAME="ShowNum" size="4" Value="10">
+      </td>
+      <td></td>
+    </tr>
+	<tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>图片信息的宽和高：</STRONG></td>
+      <td height=25>
+          图片显示宽度：<INPUT TYPE="text" NAME="iWidth" size="4" Value="0"><br>
+          图片显示高度：<INPUT TYPE="text" NAME="iHeight" size="4" Value="0">
+      </td>
+      <td></td>
+    </tr>
+    
+    <tr class='tdbg'>
+		<td colspan=3 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+	</tr>
+    </form>
+	</Table>
+</BODY>
+</HTML>

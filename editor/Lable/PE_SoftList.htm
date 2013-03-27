@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>来显示软件名称等信息，用于显示下载系统栏目页中，显示各个软件的表格式详细信息列表</title>
+<meta http-equiv='Content-Type' content='text/html; charset=gb2312'>
+<script language="javascript">
+function objectTag() {
+    var strJS,OrderType;
+	switch(document.form1.OrderType.selectedIndex)
+    {
+      case 0: OrderType='1'; break;
+      case 1: OrderType='2'; break;
+      case 2: OrderType='3'; break;
+      case 3: OrderType='4'; break;
+      case 4: OrderType='5'; break;
+	  case 5: OrderType='6'; break;
+	}
+	var ShowAllSoft,UsePage;
+	for (var i=0;i<document.form1.ShowAllSoft.length;i++){
+	var PowerEasy = document.form1.ShowAllSoft[i];
+	if (PowerEasy.checked==true)	   
+		ShowAllSoft = PowerEasy.value
+	}
+	for (var i=0;i<document.form1.UsePage.length;i++){
+	var PowerEasy = document.form1.UsePage[i];
+	if (PowerEasy.checked==true)	   
+		UsePage = PowerEasy.value
+	}
+    strJS="【SoftList(";
+	strJS+=document.form1.SoftNum.value;
+	strJS+=","
+	strJS+=document.form1.arrClassID.value;
+	strJS+=","+ShowAllSoft;
+	strJS+=","+document.form1.IsHot.checked;
+	strJS+=","+document.form1.IsElite.checked;
+	strJS+=","+"\""+document.form1.InputerName.value+"\"";
+	strJS+=","+document.form1.DateNum.value;
+	strJS+=","+OrderType;
+	strJS+=","+UsePage;
+	strJS+=","+document.form1.OpenType.selectedIndex;
+	strJS+=","+document.form1.ContentLen.value;	
+	strJS+=")】"+document.form1.SoftContent.value;
+	strJS+="【/SoftList】";
+	window.returnValue = strJS;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width='700' border='0' align='center' cellpadding='2' cellspacing='1' class='border'>  
+    <tr class=title>
+      <td align=middle colSpan=2 height=22><STRONG>来显示软件系统栏目页中软件的表格式详细信息列表</STRONG></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>下载数：</STRONG></td>
+      <td height=25><input type='text' name='SoftNum' value='0' size="8"></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>栏目ID数组：</STRONG></td>
+      <td height=25><input type='text' name='arrClassID' value='1' size="8">0为所有栏目</td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>是否显示所有下载：</STRONG></td>
+      <td height=25>
+	  <input type="radio" name="ShowAllSoft" checked value="True">是
+      <input type="radio" name="ShowAllSoft" value="False">否</td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>软件属性：</STRONG></td>
+      <td height=25>
+        <Input id=IsHot type=checkbox value=1 name=IsHot> 热门软件&nbsp;&nbsp;&nbsp;&nbsp;
+        <Input id=IsElite type=checkbox value=1 name=IsElite> 推荐软件&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#ff0000>如果都不选，将显示所有软件。</FONT></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>作者姓名：</STRONG></td>
+      <td height=25>
+        <Input maxLength=10 size=10 name=InputerName>&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#ff0000>如果不为空，则只显示指定录入者的软件，用于个人文集。</FONT></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>日期范围：</STRONG></td>
+      <td height=25>只显示最近 
+        <Input id=DateNum maxLength=3 size=5 value=30 name=DateNum> 天内更新的软件&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#ff0000>&nbsp;&nbsp;如果为空或0，则显示所有天数的软件。</FONT></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>排序方法：</STRONG></td>
+      <td height=25>
+		<Select id='OrderType' name='OrderType'> 
+		  <Option value=1 selected>软件ID（降序）</Option> 
+		  <Option value=2>软件ID（升序）</Option> 
+		  <Option value=3>更新时间（降序）</Option> 
+		  <Option value=4>更新时间（升序）</Option> 
+		  <Option value=5>点击次数（降序）</Option> 
+		  <Option value=6>点击次数（升序）</Option>
+	    </Select>
+	  </td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>是否分页显示：</STRONG></td>
+      <td height=25>
+	    <input type="radio" name="UsePage" checked value="True">是
+        <input type="radio" name="UsePage" value="False">否</td> 
+	</tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>软件打开方式：</STRONG></td>
+      <td height=25>
+		<Select id=OpenType name=OpenType> 
+		  <Option value=0 selected>在原窗口打开</Option> 
+		  <Option value=1>在新窗口打开</Option>
+	    </Select></td>
+    </tr>    
+	<tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>软件简介最多字符：</STRONG></td>
+      <td height=25>
+        <Input id=ContentLen maxLength=3 size=5 value=0 name=ContentLen> &nbsp;&nbsp;&nbsp;&nbsp;<FONT color=#ff0000>一个汉字=两个英文字符，为0时不显示</FONT></td>
+    </tr>
+	<tr class=tdbg>
+	  <td width="130" align=right height=25><STRONG>循环标签支持标签：</STRONG></td>
+	  <td>
+		<table border='0' cellpadding='0' cellspacing='0' width='100%' height='100%' align='center'>
+		  <tr>
+		   <td valign='top'>{$SoftUrl}</td>
+		   <td valign='top'>{$SoftID}</td>
+		   <td valign='top'>{$SoftName}</td>
+		   <td valign='top'>{$SoftVersion}</td>
+		   <td valign='top'>{$SoftProperty}</td>
+		   <td valign='top'>{$SoftSize}</td>
+		  </tr>
+		  <tr>
+		   <td valign='top'>{$UpdateTime}</td>
+		   <td valign='top'>{$CopyrightType}</td>
+		   <td valign='top'>{$Stars}</td>
+		   <td valign='top'>{$SoftIntro}</td>
+		   <td valign='top'>{$OperatingSystem}</td>
+		   <td valign='top'>{$SoftType}</td>
+		  </tr>
+		  <tr>
+		   <td valign='top'>{$Hits}</td>
+		   <td valign='top'>{$DayHits}</td>
+		   <td valign='top'>{$WeekHits}</td>
+		   <td valign='top'>{$MonthHits}</td>
+		   <td valign='top'>{$SoftPoint}</td>
+		   <td valign='top'>{$SoftAuthor}</td>
+		  </tr>
+		  <tr>
+		   <td valign='top'>{$SoftLanguage}</td>
+		   <td valign='top'>{$AuthorEmail}</td>
+		   <td valign='top'>{$DemoUrl}</td>
+		   <td valign='top'>{$RegUrl}</td>
+		   <td valign='top'>{$SoftPic(130,90)}</td>
+		   <td valign='top'></td>
+		  </tr>
+		</table>
+	</td>
+    </tr>
+	<tr class='tdbg'>
+		<td width="130" align=right height=25><STRONG>请输入循环标签Html代码：</STRONG></td>
+		<td ><TEXTAREA NAME='SoftContent' ROWS='' COLS='' style='width:500px;height:200px'></TEXTAREA></td>
+	</tr>
+	<tr class='tdbg'>
+		<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+	</tr>
+  </table>
+</FORM>
+</body>
+</html>

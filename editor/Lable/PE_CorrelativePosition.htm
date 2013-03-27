@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>显示相关职位名称等信息</title>
+<script language="javascript">
+function objectTag() {
+    var strJS,OrderType,ShowDateType,OpenType;
+	switch(document.form1.OrderType.selectedIndex)
+    {
+      case 0: OrderType='1'; break;
+      case 1: OrderType='2'; break;
+	  case 2: OrderType='3'; break;
+      case 3: OrderType='4'; break;
+	}
+	switch(document.form1.ShowDateType.selectedIndex)
+    {
+      case 0: ShowDateType='0'; break;
+      case 1: ShowDateType='1'; break;
+	  case 2: ShowDateType='2'; break;
+      case 3: ShowDateType='3'; break;
+	}
+	switch(document.form1.OpenType.selectedIndex)
+    {
+      case 0: OpenType='0'; break;
+      case 1: OpenType='1'; break;
+	}
+
+	strJS = '{$GetCorrelativePosition(';
+	strJS+=document.form1.PositionNum.value;
+	strJS+=","+OrderType;
+	strJS+=","+document.form1.TitleLen.value;
+	strJS+=","+ShowDateType;
+	strJS+=","+document.form1.Cols.value;
+	strJS+=OpenType;
+	strJS+=')}';
+	window.returnValue = strJS;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width="600" border="0" class='border'  cellpadding='2' cellspacing='1'>
+  <tr>
+    <td colspan="3" class='title' align='center'><strong>显示职位列表标签设置：</strong></td>
+  </tr>
+  <tr class=tdbg>
+    <td align=left height=25>显示职位数：</td>
+    <td><input name="PositionNum"  type="text" size="12" value="0"></td>
+	<td align=left height=25><font color="red">0为所有的相关职位</font></td>
+  </tr>
+  <tr class=tdbg>
+    <td align=left height=25>排序方式</td>
+    <td height=25 colspan="2">
+		<Select id=OrderType name=OrderType style=width:130px> 
+		  <Option value=0 selected>按职位ID降序</Option> 
+		  <Option value=1>按职位ID升序</Option>
+		  <Option value=2 selected>按发布时间降序</Option> 
+		  <Option value=3>按发布时间升序</Option>
+        </Select> 
+	</td>
+  </tr>
+  <tr class=tdbg>
+    <td align=left height=25>职位名称长度：</td>
+    <td><input name="TitleLen" type="text" size="12" value="8"></td>
+	<td height=25><font color="red">一个汉字=两个英文字符<br>若为0，则显示完整职位名</font></td>
+  </tr>
+  <tr class=tdbg>
+    <td align=left height=25>更新日期显示样式：</td>
+    <td height=25 colspan="2">
+		<Select id=ShowDateType name=ShowDateType style=width:130px> 
+		  <Option value=0>不显示日期</Option> 
+		  <Option value=1 selected>显示年月日(2006-03-04)</Option>
+		  <Option value=2>显示月日(3月4日)</Option>
+		  <Option value=3>显示月日(03-04)</Option> 
+        </Select> 
+	</td>
+  </tr>
+    <tr class=tdbg>
+    <td align=left height=25>每行的列数：</td>
+    <td><input name="Cols"  type="text" size="12" value="3"></td>
+	<td align=left height=25><font color="red">每行的列数，超过此列数就换行</font></td>
+  </tr>
+  <tr class=tdbg>
+    <td align=left height=25>申请职位页打开方式：</td>
+    <td height=25 colspan="2">
+		<Select id=OpenType name=OpenType> 
+		  <Option value=0>原窗口打开</Option> 
+		  <Option value=1 selected>新窗口打开</Option>
+        </Select> 
+	</td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=3 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

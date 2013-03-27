@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>显示相关文章</title>
+<script language="javascript">
+	function objectTag() {
+		var reval;
+		reval = '{$GetCorrelative('+document.form1.ArticalNum.value+','+document.form1.TitleNum.value+')}';  
+		window.returnValue = reval;
+		window.close();
+	}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+  <tr class='title'>
+    <td colspan="2" align='center'><strong>显示相关文章标签设置：</strong></td>
+  </tr>
+  <tr class='tdbg'>
+    <td align='right'>最多显示几篇文章：</td>
+    <td>
+    <input name="ArticalNum" type="text" size="10" value="10">篇</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align='right'>标题最多几个字符：</td>
+    <td>
+    <input name="TitleNum" type="text" size="10" value="50"><br><font color='blue'>注：两个字符为一个汉字！</font></td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

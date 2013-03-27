@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+<base target="_self">
+<script language="javascript">
+function objectTag() {
+    
+	//alert(document.form1.CommandType.length);
+    var iSearchStyle;
+    for(var i =0; i< document.form1.SearchStyle.length; i++)
+    {
+        if(document.form1.SearchStyle[i].checked)
+        {
+            iSearchStyle = document.form1.SearchStyle[i].value;
+        }
+    }
+    
+    strJS="{$SearchCondition(";
+	strJS+=iSearchStyle;
+    strJS+=","+document.form1.Cols.value;
+	strJS+=")}";
+	window.returnValue = strJS;
+	window.close();
+}
+</script>
+
+</HEAD>
+
+<BODY>
+<form name="form1">
+<table width='100%' border='0' align='center' cellpadding='2' cellspacing='1' class='border'>  
+    <tr class=title>
+      <td align=middle colSpan=3 height=22><STRONG>供求信息显示搜索条件标签 </STRONG></td>
+    </tr>
+   
+   
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>显示方式：</STRONG></td>
+      <td height=25>
+	  <INPUT TYPE="radio" NAME="SearchStyle" Id="SearchStyle" Value="0" Checked>简要搜索条件<br>
+	  <INPUT TYPE="radio" NAME="SearchStyle" Id="SearchStyle" Value="1">详细搜索条件</td>
+      <td></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25><STRONG>信息类型显示数目：</STRONG></td>
+      <td height=25><INPUT TYPE="text" NAME="Cols" Value="3" Size="4">
+	  </td>
+      <td>此参数用来显示在简要搜索条件下供求类型的数目</td>
+    </tr>
+    
+    <tr class='tdbg'>
+		<td colspan=3 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+	</tr>
+    </form>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

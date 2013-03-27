@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>显示本站公告信息</title>
+<script language="javascript">
+function objectTag() {
+	var reval,AnnouceNum,ShowType;
+	for (var i=0;i<document.form1.ShowType.length;i++){
+	var PowerEasy = document.form1.ShowType[i];
+	if (PowerEasy.checked==true)	   
+		ShowType = PowerEasy.value
+	}
+	reval = '{$ShowAnnounce('+ShowType+','+document.form1.AnnouceNum.value+')}';  
+	window.returnValue = reval;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width="240" width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+  <tr class='title'>
+    <td colspan="2" align="center"><strong>显示本站公告信息</strong></td>
+  </tr>
+  <tr  class='tdbg'>
+    <td align="right">显   示   方  式：</td>
+    <td>
+		<input type="radio" name="ShowType" checked value="1">纵向
+		<input type="radio" name="ShowType" value="2">横向</td>
+  </tr>
+  <tr  class='tdbg'>
+    <td align="right">最多显示公告条数：</td>
+    <td ><input name="AnnouceNum" type="text" size="15" value="5"></td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

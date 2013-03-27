@@ -1,0 +1,285 @@
+/* 网站链接总的CSS定义:可定义内容为链接字体颜色、样式等 */
+a {text-decoration: none;} /* 链接无下划线,有为underline */
+a:link {color: #000000;text-decoration: none;} /* 未访问的链接 */
+a:visited {color: #000000;text-decoration: none;} /* 已访问的链接 */
+a:hover {color: #ff6600;text-decoration: none;} /* 鼠标在链接上 */
+a:active {color: #000000;text-decoration: none;} /* 点击激活链接 */
+
+/* 栏目标题文字链接的CSS定义 */
+a.Class:link {color: #ffffff;}
+a.Class:visited {color: #ffffff;}
+a.Class:hover {color: #ffff00;}
+a.Class:active {color: #ffffff;}
+/* 固定排课表格顶部星期的CSS定义 */
+a.title:link {color: #ffffff;}
+a.title:visited {color: #ffffff;}
+a.title:hover {color: #449AE8;}
+a.title:active {color: #ffffff;}
+
+/* 固定排课表格左边周次的CSS定义 */
+a.lefts:link {color: #ffffff;}
+a.lefts:visited {color: #ffffff;}
+a.lefts:hover {color: #449AE8;}
+a.lefts:active {color: #ffffff;}
+
+/* 固定排课表格表格内原始时期的CSS定义 */
+a.Date:link {color: #000000;}
+a.Date:visited {color: #000000;}
+a.Date:hover {color: #ff6600;}
+a.Date:active {color: #000000;}
+Body
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 9pt;
+    text-decoration: none;
+    line-height: 150%;
+    background:#ffffff;
+    SCROLLBAR-FACE-COLOR: #2B73F1;
+    SCROLLBAR-HIGHLIGHT-COLOR: #0650D2;
+    SCROLLBAR-SHADOW-COLOR: #449AE8;
+    SCROLLBAR-3DLIGHT-COLOR: #449AE8;
+    SCROLLBAR-ARROW-COLOR: #02338A;
+    SCROLLBAR-TRACK-COLOR: #0650D2;
+    SCROLLBAR-DARKSHADOW-COLOR: #0650D2;
+    padding:0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+TD
+{
+FONT-FAMILY:宋体;FONT-SIZE: 9pt;line-height: 150%;
+}
+
+Input
+{
+    FONT-SIZE: 12px;
+    HEIGHT: 20px;
+}
+Button
+{
+    FONT-SIZE: 9pt;
+    HEIGHT: 20px;
+}
+Select
+{
+    FONT-SIZE: 9pt;
+    HEIGHT: 20px;
+}
+.Title
+{
+    background:#449AE8;
+    color: #ffffff;
+    font-weight: normal;
+}
+.border
+{
+    border: 1px solid #449AE8;
+}
+/* 固定排课表格表格的CSS定义开始 */
+.Date_border
+{
+    border: 1px solid ;
+}
+.Date_title
+{
+    background:#449AE8;
+    color: #ffffff;
+    font-weight: normal;
+}
+.Date_tdbg
+{
+    background:#449AE8;
+    color: #ffffff;
+    font-weight: normal;
+}
+.style2 {
+    font-size: 10px;
+}
+.style3 {
+    font-size: 12px;
+}
+/* 固定排课表格表格的CSS定义结束 */
+/* 在线比较文件的CSS定义开始 */
+.tdtop{
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+.tdinter{
+    border-right: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;
+    text-align: center;
+}
+.tdbg1{
+    background:#F0F8F0;
+    line-height: 120%;
+}
+.title0
+{
+    background:#EBEADB;
+    color: #000000;
+    font-weight: normal;
+}
+/* 在线比较文件的CSS定义结束 */
+.tdbg{
+    background:#f0f0f0;
+    line-height: 120%;
+}
+.tdbgmouseover{
+    background:#BFDFFF;
+    line-height: 120%;
+}
+.tdbgmouseout1{
+    background:#ffffff;
+    line-height: 120%;
+}
+.tdbgmouseout2{
+    background:#F3F3F3;
+    line-height: 120%;
+}
+.tdbg2{
+    background:#E0EEF5;
+    line-height: 120%;
+}
+.tdbg5{
+    background:#E0EEF5;
+    line-height: 120%;
+}
+.title3{
+    width:80px;
+    background:url('images/titlebg4.gif');
+    line-height: 120%;
+    padding-top:2px;
+    cursor:hand;
+}
+.title4
+{
+    width:80px;
+    background:url('images/titlebg3.gif');
+    color: #ffffff;
+    font-weight: normal;
+    padding-top:2px;
+    cursor:hand;
+}
+
+.title5{
+    width:80px;
+    background:url('images/titlebg2.gif');
+    line-height: 120%;
+    padding-top:2px;
+    cursor:hand;
+}
+
+.title6
+{
+    width:80px;
+    background:url('images/titlebg1.gif');
+    color: #ffffff;
+    font-weight: normal;
+    padding-top:2px;
+    cursor:hand;
+}
+
+.Glow /*　标题文字发光效果定义，白字深蓝底 */
+{
+filter: Glow(Color=#0F42A6, Strength=1);Dropshadow(Color=#0F42A6, OffX=1, OffY=1,); WIDTH: 100%; COLOR: #ffffff; LINE-HEIGHT: 20px
+}
+.topbg /*　标题背景单元格定义，白字深蓝底 */
+{
+    background:#0650D2;color:#FFFFFF;
+/*  font-weight:bold;text-align: centen; */
+}
+.topbg2 /*  浅色背景定义，用于首页细线 */
+{
+    background:#449AE8;
+}
+.bgcolor {
+    background-color: #E1F4EE;
+}
+.bginput {
+background:url("Images/TxtRule.jpg");
+background-repeat:repeat-x;
+font-family:ms shell dlg,tahoma,sans-serif,宋体;
+font-size:12px;
+border: 1px solid #a7a6aa;
+HEIGHT: 20px;
+}
+.show_page {
+    text-align: center;
+}
+.RomNumber {
+    FONT-SIZE: 9pt;
+    overflow:hidden;
+    background-color:highlight;
+    border-right:0px;
+    text-align:right;
+    font-weight:bold;
+    color:highlighttext;
+    cursor:default;
+}
+.txt_main
+{
+    FONT-SIZE: 9pt;
+    SCROLLBAR-FACE-COLOR: #f6f6f6;
+    SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    SCROLLBAR-SHADOW-COLOR: #cccccc;
+    SCROLLBAR-3DLIGHT-COLOR: #cccccc;
+    SCROLLBAR-ARROW-COLOR: #330000;
+    SCROLLBAR-TRACK-COLOR: #f6f6f6;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+}
+
+div#satitle {
+    background-color: #b1c1d1;
+    position : absolute;
+    z-index=2;
+    left = 285;
+    top = 205;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#satitle2 {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#satitle3 {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#satitle4 {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#skey {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#sauthor {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+div#scopyfrom {
+    background-color: #b1c1d1;
+    position : absolute;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+}

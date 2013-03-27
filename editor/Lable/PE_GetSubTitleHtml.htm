@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>正文分页导航</title>
+<script language="javascript">
+function objectTag() {
+    var reval;
+    for (var i=0;i<document.form1.ShowType.length;i++){
+        var PowerEasy = document.form1.ShowType[i];
+        if (PowerEasy.checked==true)
+            ShowType = PowerEasy.value
+    }
+    reval = '{$GetSubTitleHtml('+ShowType+','+document.form1.Cols.value+')}';
+    window.returnValue = reval;
+    window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width="340" width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+  <tr  class='title'  class='tdbg'>
+    <td colspan="2" align="center"><strong>正文分页导航：</strong></td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right" width="40%"  class='tdbg5'>显示样式：</td>
+    <td>
+        <input type="radio" name="ShowType" value="0" checked onClick="Login.style.display='none'"> 下拉框式
+        <input type="radio" name="ShowType" value="1" onClick="Login.style.display=''"> 表格形式
+    </td>
+  </tr>
+  <tr class='tdbg' id="Login" style='display:none'>
+    <td align="right"  class='tdbg5'>分多少列显示：</td>
+    <td><input name="Cols" type="text" size="10" value="0"></td>
+  </tr>
+  <tr class='tdbg'>
+    <td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

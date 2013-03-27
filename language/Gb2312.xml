@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!--Powered By PowerEasy 2006-->
+<Chinese>
+	<BaseText>
+		<FirstPage>网站首页</FirstPage>
+		<Nav>您现在的位置：</Nav>
+		<NavLink>&gt;&gt;</NavLink>
+		<ChannelLink><![CDATA[&nbsp;|&nbsp;]]></ChannelLink>
+		<ClassLink>|</ClassLink>
+		<DefAuthor>佚名</DefAuthor>
+		<UnKnowAuthor>未知</UnKnowAuthor>
+		<DefCopyFrom>本站原创</DefCopyFrom>
+		<Girl>女</Girl>
+		<Man>男</Man>
+		<NoEnter>未填</NoEnter>
+		<Secrit>保密</Secrit>
+		<Year>年</Year>
+		<Month>月</Month>
+		<Day>日</Day>
+		<ChannelErr>找不到指定的频道，或频道已被禁用！</ChannelErr>
+		<TemplateErr>找不到模板</TemplateErr>
+		<ArticleTeam>篇文章</ArticleTeam>
+		<PurviewCheckedErr><![CDATA[<li>对不起，您没有浏览此栏目内容的权限！</li>]]></PurviewCheckedErr>
+		<ChannelPurviewErr><![CDATA[<li>对不起，您没有浏览此频道内容的权限！</li>]]></ChannelPurviewErr>
+		<SearchPurviewContent>此内容需要有指定权限才可以预览</SearchPurviewContent>
+		<DynaPage><![CDATA[<div id="dyna_body_{dyid}">{dybody}</div><div id="dyna_page_{dyid}" style="text-align: right;">{dyfoot}</div>]]></DynaPage>
+	</BaseText>
+	<Site>
+		<Comment>
+			<ShowDetal>显示评论详细内容</ShowDetal>
+			<Send>发表评论</Send>
+			<Err1><![CDATA[<li>请指定{$ChannelShortName}ID</li>]]></Err1>
+			<Err2><![CDATA[<br>找不到指定的{$ChannelShortName}]]></Err2>
+			<Err3><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;没有任何评论]]></Err3>
+			<Err4><![CDATA[<li>对不起，您没有本栏目发表评论的权限！</li>]]></Err4>
+			<Err5><![CDATA[<li>对不起，未指定栏目的{$ChannelShortName}暂不开放发表评论！</li>]]></Err5>
+			<ShowCommentList1><![CDATA[<tr class="Comment_title" align="center"><td>评论人</td><td>评论内容</td><td>评论时间</td><td>打分</td></tr>]]></ShowCommentList1>
+			<ShowComment1><![CDATA[<tr class="Comment_tdbg1"><td width="100">{$CommentName}</td><td style="width:480; word-wrap:break-word;">{$Content}</td><td align="center" width="120">{$WriteTime}</td><td align="center" width="40">{$Score}分</td></tr>]]></ShowComment1>
+			<AdminReplayType1><![CDATA[<tr class="Comment_tdbg2"><td>&nbsp;</td><td colspan="5">★&nbsp;管理员『{$AdminName}』于 {$ReplyTime}回复道：&nbsp;&nbsp;&nbsp;&nbsp;{$ReplyContent}</td></tr>]]></AdminReplayType1>
+			<ShowComment2><![CDATA[<tr class="Comment_title"><td height=22 colspan="3">&nbsp;&nbsp评论人：{$CommentName}&nbsp;&nbsp;评论时间：{$WriteTime}&nbsp;&nbsp;打分：{$Score}分</td></tr><tr class="Comment_tdbg1"><td width="5">&nbsp;</td><td>{$Content}</td><td width="5">&nbsp;</td></tr>]]></ShowComment2>
+			<AdminReplayType2><![CDATA[<tr class="Comment_tdbg2"><td width="5">&nbsp;</td><td>★&nbsp;管理员『{$AdminName}』于 {$ReplyTime}回复道：&nbsp;&nbsp;{$ReplyContent}</td><td width="5">&nbsp;</td></tr>]]></AdminReplayType2>
+			<ShowPageType>Chinese</ShowPageType>
+			<ShowPageChar>条评论</ShowPageChar>
+			<SusMsg1>发表评论成功！</SusMsg1>
+			<SusMsg2>发表评论成功！请等候管理员的审核！审核后才会显示</SusMsg2>
+			<ShowCommentListJs><![CDATA[<tr class="comment_title" align="center"><td>评论人</td><td>评论内容</td><td>评论时间</td><td>打分</td></tr>]]></ShowCommentListJs>
+			<ShowCommentJs><![CDATA[<tr bgcolor="white"><td align="center" width="80">{$CommentName}</td><td>{$Content}</td><td align="center" width="120">{$WriteTime}</td><td align="center" width="40">{$Score}分</td></tr>]]></ShowCommentJs>
+			<AdminReplayTypeJs><![CDATA[<tr><td>&nbsp;</td><td colspan="5"><font color="009900">★</font>&nbsp;管理员『<font color="blue">{$AdminName}</font>』于 {$ReplyTime} 回复道：&nbsp;&nbsp;&nbsp;&nbsp;{$ReplyContent}<br></td></tr>]]></AdminReplayTypeJs>
+			<ShowMore><![CDATA[<div align="center"><a href="{$strFileName}">查看评论详细内容及更多评论</a></div>]]></ShowMore>
+		</Comment>
+		<NavChar>
+			<Announce>网站公告</Announce>
+			<FriendSite>友情链接</FriendSite>
+			<Vote>网站调查</Vote>
+			<CopyRight>版权申明</CopyRight>
+		</NavChar>
+		<Errmsg>
+			<UserErr>没有任何会员</UserErr>
+			<AuthorErr>没有任何作者</AuthorErr>
+			<AnnounceErr>没有公告或找不到指定的公告</AnnounceErr>
+			<FriendSiteErr>暂时还没有类别或专题的友情链接。</FriendSiteErr>
+		</Errmsg>
+		<ShowVote>
+			<VoteErr><![CDATA[&nbsp;没有任何调查]]></VoteErr>
+			<VoteBody><![CDATA[<form name="VoteForm{$lid}" method="post" action="{$strInstallDir}vote.asp" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;{$Title}<br>{$VoteBody}<br><input name="VoteType" type="hidden"value="{$VoteType}"><input name="Action" type="hidden" value="Vote"><input name="ID" type="hidden" value="{$ID}"><div align="center"><a href="javascript:VoteForm{$lid}.submit();"><img src="{$strInstallDir}images/voteSubmit.gif" width="52" height="18" border="0"></a>&nbsp;&nbsp;<a href="{$strInstallDir}Vote.asp?ID={$ID}&Action=Show" target="_blank"><img src="{$strInstallDir}images/voteView.gif" width="52" height="18" border="0"></a></div></form>]]></VoteBody>
+			<NoId>不能确定调查ID</NoId>
+			<NoVote>找不到相应的调查</NoVote>
+			<PreVote>==　非常感谢您的投票！　==</PreVote>
+			<VoteED>==　你已经投过票了，请勿重复投票！　==</VoteED>
+			<Vote1>您还没有投票，请您在此投下您宝贵的一票！</Vote1>
+			<Vote2>感谢您参加了本站的所有调查！！！</Vote2>
+			<Vote3>欢迎你继续参加本站的其他调查：</Vote3>
+		</ShowVote>
+		<ShowAnnounce>
+			<PageChar>个公告</PageChar>
+			<AnnounceErr><![CDATA[<p>&nbsp;&nbsp;没有公告</p>]]></AnnounceErr>
+			<AnnounceBody1><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;<a class="AnnounceBody1" href="#" onclick="javascript:window.open('{$strInstallDir}Announce.asp?ChannelID={$ChannelID}&ID={$ID}', 'newwindow', 'height=440, width=400, toolbar=no, menubar=no, scrollbars=auto, resizable=no, location=no, status=no')" title="{$Content}">{$title}{$AnnounceInfo}</a>]]></AnnounceBody1>
+			<AnnounceBody2><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;<a class="AnnounceBody2" href="#" onclick="javascript:window.open('{$strInstallDir}Announce.asp?ChannelID={$ChannelID}&ID={$ID}', 'newwindow', 'height=440, width=400, toolbar=no, menubar=no, scrollbars=auto, resizable=no, location=no, status=no')" title="{$Content}">{$title}{$AnnounceInfo}</a>]]></AnnounceBody2>
+		</ShowAnnounce>
+		<PopAnnouceWindow>
+			<PopCode><![CDATA[window.open ("{$strInstallDir}Announce.asp?ChannelID={$ChannelID}", "newwindow", "height={$Height}, width={$Width}, toolbar=no, menubar=no, scrollbars=auto, resizable=no, location=no, status=no")]]></PopCode>
+		</PopAnnouceWindow>
+		<ShowFriendSite>
+			<option>友情文字链接站点</option>
+			<Showtable><![CDATA[<table width="100%" cellSpacing="5"><tr align="center" class="tdbg">]]></Showtable>
+			<GetFriendSite>点击申请</GetFriendSite>
+			<FriendSiteTitle><![CDATA[<a href="{$LinkSiteUrl}" target="_blank" title="网站名称：{$SiteName}{$br}网站地址：{$SiteUrl}{$br}网站简介：{$SiteIntro}">{$SiteShow}</a>]]></FriendSiteTitle>
+			<FriendSiteInfo>网站简介：</FriendSiteInfo>
+		</ShowFriendSite>
+		<GetClass_Option>
+			<option>请先添加栏目</option>
+			<outside>(外)</outside>
+		</GetClass_Option>
+		<ReplaceCommon>
+			<AdminLogin>管理登录</AdminLogin>
+			<a2>|</a2>
+		</ReplaceCommon>
+		<ShowFriendSiteList>
+			<PageChar>个站点</PageChar>
+			<t1>分类显示：</t1>
+			<t2>共有 0 个友情链接</t2>
+			<t3><![CDATA[<td width="60" align="center">链接类型</td><td width="80" align="center">网站名称</td><td width="100" align="center">网站LOGO</td><td align="center">网站简介</td><td width="60" align="center">站长</td><td width="60" align="center">操作</td>]]></t3>
+			<t4>LOGO链接</t4>
+			<t5>文字链接</t5>
+			<t6>所有类型</t6>
+		</ShowFriendSiteList>
+		<GetTopUser>
+			<Table1><![CDATA[<td width="30" align="center">名次</td><td align="center">用户名</td><td align="center">文章数</td>]]></Table1>
+		</GetTopUser>
+		<SiteCountAll>注册会员：{$Count}位</SiteCountAll>
+		<GetMenuJS>栏 目 树 形 导 航</GetMenuJS>
+		<Xmlhttptime>10</Xmlhttptime>
+		<PrivatePage>
+			<PageErr>您尚未被授权访问此页面!</PageErr>
+			<FieldErr>参数{$FieldName}不能为空!</FieldErr>
+		</PrivatePage>
+	</Site>
+	<Rss>
+		<CloseEd>本站已关闭RSS功能！</CloseEd>
+		<NoSee>内容不可预览，请登录网站后查看。</NoSee>
+		<Gx1> -- 分类更新</Gx1>
+		<Gx2> -- 专题更新</Gx2>
+	</Rss>
+	<Wap>
+        <!--<Domain></Domain>-->
+		<CloseEd>本站已关闭WAP功能！</CloseEd>
+		<BackBotton>返回</BackBotton>
+		<ManageLogin>-管理登录-</ManageLogin>
+		<News>-最新更新-</News>
+		<Alt>手机WAP浏览支持</Alt>
+		<ImgHight>257</ImgHight>
+		<ImgWidth>160</ImgWidth>
+	</Wap>
+	<ShowSource>
+		<ShowUser>
+			<PageTitle>会员信息</PageTitle>
+			<NoUser>UserID不能为空</NoUser>
+			<NoFoundUser>找不到此会员</NoFoundUser>
+			<Persen>个人会员</Persen>
+			<Group>单位会员</Group>
+			<t1><![CDATA[&nbsp;<a class="workslist" href="{$ClassFileName}?UserID={$UserID}&ListType=0">查看文章集</a>]]></t1>
+			<t2><![CDATA[&nbsp;<a class="workslist" href="{$ClassFileName}?UserID={$UserID}&ListType=2">查看图片集</a>]]></t2>
+			<t3><![CDATA[&nbsp;<a class="workslist" href="{$ClassFileName}?UserID={$UserID}&ListType=4">查看软件集</a>]]></t3>
+		</ShowUser>
+		<ShowUserList>
+			<PageTitle>会员列表</PageTitle>
+			<NoFoundUser>没有任何会员</NoFoundUser>
+			<Order><![CDATA[<a href="{$strFileName}&OrderType=1">按发表文章数排序</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$strFileName}&OrderType=2">按注册日期排序</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$strFileName}&OrderType=3">按会员ID排序</a>]]></Order>
+			<t1><![CDATA[<tr align="center" class="Channel_title"><td>会员昵称</td><td>性别</td><td>Email</td><td>QQ号码</td><td>MSN</td><td>主页</td><td>注册日期</td><td>文章数</td><tr>]]></t1>
+			<PageChar>个会员</PageChar>
+		</ShowUserList>
+		<ShowAuthor>
+			<PageTitle>作者信息</PageTitle>
+			<AuthorErr>作者名称不能为空</AuthorErr>
+			<NoFoundAuthor>不存在!</NoFoundAuthor>
+			<AuthorType1>大陆作者</AuthorType1>
+			<AuthorType2>港台作者</AuthorType2>
+			<AuthorType3>海外作者</AuthorType3>
+			<AuthorType4>本站特约</AuthorType4>
+			<AuthorType5>其他作者</AuthorType5>
+		</ShowAuthor>
+		<ShowAuthorList>
+			<PageTitle>作者列表</PageTitle>
+			<NoDay><![CDATA[&nbsp;&nbsp;<h3>{$AuthorName}本日未发表任何作品</h3>]]></NoDay>
+			<NoArticle><![CDATA[&nbsp;&nbsp;<h3>{$AuthorName}在本频道还未收录任何作品</h3>]]></NoArticle>
+			<ShowDetal>点击这里浏览具体内容>>></ShowDetal>
+			<t1>姓名</t1>
+			<t2>性别</t2>
+			<t3>所属频道</t3>
+			<t4>作者简介</t4>
+			<NoFoundAuthor>本频道尚未添加作者</NoFoundAuthor>
+			<PageChar>个作者</PageChar>
+			<HitsOfHot>100</HitsOfHot>
+		</ShowAuthorList>
+		<ShowCopyFrom>
+			<PageTitle>来源信息</PageTitle>
+			<CopyFromErr>来源名不能为空</CopyFromErr>
+			<NoFoundCopyFrom>不存在!</NoFoundCopyFrom>
+			<CopyFromType1>友情站点</CopyFromType1>
+			<CopyFromType2>中文站点</CopyFromType2>
+			<CopyFromType3>外文站点</CopyFromType3>
+			<CopyFromType4>其他站点</CopyFromType4>
+			<NoArticle>在本频道还未收录任何作品</NoArticle>
+			<ShowDetal>点击这里浏览具体内容>>></ShowDetal>
+		</ShowCopyFrom>
+		<ShowCopyFromList>
+			<PageTitle>来源列表</PageTitle>
+			<t1>名称</t1>
+			<t2>主页</t2>
+			<t3>所属频道</t3>
+			<t4>来源简介</t4>
+			<NoFoundCopyFrom>本频道尚未添加来源</NoFoundCopyFrom>
+			<PageChar>个来源</PageChar>
+			<HitsOfHot>100</HitsOfHot>
+		</ShowCopyFromList>
+		<ShowProducer>
+			<PageTitle>厂商信息</PageTitle>
+			<ProducerErr>厂商不能为空</ProducerErr>
+			<NoFoundProducer>不存在!</NoFoundProducer>
+			<ProducerType1>大陆厂商</ProducerType1>
+			<ProducerType2>港台厂商</ProducerType2>
+			<ProducerType3>日韩厂商</ProducerType3>
+			<ProducerType4>欧美厂商</ProducerType4>
+			<ProducerType5>其他厂商</ProducerType5>
+			<NoDay><![CDATA[&nbsp;&nbsp;<h3>{$ProducerName}本日没有发布商品</h3>]]></NoDay>
+			<NoFound><![CDATA[&nbsp;&nbsp;<h3>{$ProducerName}目前没有发布商品</h3>]]></NoFound>
+			<ProductItem>个商品</ProductItem>
+			<ShowDetal>点击这里浏览具体内容>>></ShowDetal>
+		</ShowProducer>
+		<ShowProducerList>
+			<PageTitle>厂商列表</PageTitle>
+			<t1>名称</t1>
+			<t2>主页</t2>
+			<t3>所属频道</t3>
+			<t4>厂商简介</t4>
+			<NoFoundProducer>本频道尚未添加厂商</NoFoundProducer>
+			<PageChar>个厂商</PageChar>
+			<HitsOfHot>100</HitsOfHot>
+		</ShowProducerList>
+		<ShowTrademark>
+			<PageTitle>品牌信息</PageTitle>
+			<TrademarkErr>品牌不能为空</TrademarkErr>
+			<NoFoundTrademark>不存在!</NoFoundTrademark>
+			<TrademarkType1>大陆品牌</TrademarkType1>
+			<TrademarkType2>港台品牌</TrademarkType2>
+			<TrademarkType3>日韩品牌</TrademarkType3>
+			<TrademarkType4>欧美品牌</TrademarkType4>
+			<TrademarkType5>其他品牌</TrademarkType5>
+			<NoArticle>目前没有发布商品</NoArticle>
+			<TrademarkItem>个商品</TrademarkItem>
+			<ShowDetal>点击这里浏览具体内容>>></ShowDetal>
+		</ShowTrademark>
+		<ShowTrademarkList>
+			<PageTitle>品牌列表</PageTitle>
+			<t1>名称</t1>
+			<t2>图片</t2>
+			<t3>所属频道</t3>
+			<t4>品牌简介</t4>
+			<NoFoundTrademark>本频道尚未添加品牌</NoFoundTrademark>
+			<PageChar>个品牌</PageChar>
+			<HitsOfHot>100</HitsOfHot>
+		</ShowTrademarkList>
+		<Space>
+			<NotFound>暂无新加入的空间!</NotFound>
+			<HitsOfHot>100</HitsOfHot>
+		</Space>
+	</ShowSource>
+	<Article>
+		<ChannelShortName>文章</ChannelShortName>
+		<AuthorShowType>0</AuthorShowType>
+		<CopyFromShowType>0</CopyFromShowType>
+		<ChannelCount><![CDATA[{$ChannelShortName}总数： {$ItemChecked_Channel} {$ChannelItemUnit}<br>待审{$ChannelShortName}： {$UnItemChecked} {$ChannelItemUnit}<br>评论总数： {$CommentCount_Channel} 条<br>专题总数： {$SpecialCount_Channel} 个<br>{$ChannelShortName}阅读： {$HitsCount_Channel} 人次<br>]]></ChannelCount>
+		<Include>
+			<ClassChar><![CDATA[[{$Text}]]]></ClassChar>
+			<Author><![CDATA[[{$Text}]]]></Author>
+			<Date><![CDATA[[{$Text}]]]></Date>
+			<Hits><![CDATA[[<font color="red">{$Text}</font>]]]></Hits>
+		</Include>
+		<ArticlePro1>[图文]</ArticlePro1>
+		<ArticlePro2>[组图]</ArticlePro2>
+		<ArticlePro3>[推荐]</ArticlePro3>
+		<ArticlePro4>[注意]</ArticlePro4>
+		<ShowIndex>
+			<PageTitle>首页</PageTitle>
+		</ShowIndex>
+		<ShowClass>
+			<ClassIDErr>请指定栏目ID！</ClassIDErr>
+			<NoChildClass>没有任何子栏目</NoChildClass>
+		</ShowClass>
+		<ShowArticle>
+			<PageTitle>{$ChannelShortName}正文</PageTitle>
+			<ArticleIDErr>请指定ArticleID！</ArticleIDErr>
+			<NoArticle>你要找的{$ChannelShortName}不存在，或者已经被管理员删除！</NoArticle>
+			<ExclusiveArticle>您无权浏览此专属{$ChannelShortName}！</ExclusiveArticle>
+			<OnTop><![CDATA[<font color=blue>顶</font>&nbsp;]]></OnTop>
+			<Hot><![CDATA[<font color=red>热</font>&nbsp;]]></Hot>
+			<Elite><![CDATA[<font color=green>荐</font>]]></Elite>
+			<Star>★</Star>
+			<Star_Color>#009999</Star_Color>
+			<NoCorrelative>没有相关{$ChannelShortName}</NoCorrelative>
+			<PrevArticle_Link><![CDATA[<li>上一{$ItemUnit}： ]]></PrevArticle_Link>
+			<NoPrevArticle>没有了</NoPrevArticle>
+			<NextArticle_Link><![CDATA[<li>下一{$ItemUnit}： ]]></NextArticle_Link>
+			<NoNextArticle>没有了</NoNextArticle>
+		</ShowArticle>
+		<ShowSpecial>
+			<PageTitle>[专题]</PageTitle>
+			<SpecialIDErr>请指定SpecialID！</SpecialIDErr>
+			<NoSpecial>找不到指定的专题！</NoSpecial>
+			<Path_Special><![CDATA[<font color=blue>[专题]</font>]]></Path_Special>
+		</ShowSpecial>
+		<ShowSpecialList>
+			<NoSpecial>没有任何专题</NoSpecial>
+		</ShowSpecialList>
+		<ShowSearch>
+			<PageTitle>搜索结果</PageTitle>
+			<SearchInterval>为了避免恶意搜索而消耗大量系统资源，请您在 {$SearchInterval} 秒后再刷新本页！</SearchInterval>
+			<NoFound>没有或没有找到任何{$ChannelShortName}</NoFound>
+			<ResultTitle_All><![CDATA[所有{$ChannelShortName}]]></ResultTitle_All>
+			<ResultTitle_Search><![CDATA[本次高级搜索结果]]></ResultTitle_Search>
+			<ResultTitle_Title><![CDATA[标题含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Title>
+			<ResultTitle_Content><![CDATA[内容含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Content>
+			<ResultTitle_Author><![CDATA[作者姓名中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Author>
+			<ResultTitle_Inputer><![CDATA[<font color=red>{$Keyword}</font> 录入的{$ChannelShortName}]]></ResultTitle_Inputer>
+			<ResultTitle_Keyword><![CDATA[关键字中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Keyword>
+			<Content_Lenght>200</Content_Lenght>
+		</ShowSearch>
+		<ShowNew>
+			<PageTitle>最新{$ChannelShortName}</PageTitle>
+		</ShowNew>
+		<ShowElite>
+			<PageTitle>推荐{$ChannelShortName}</PageTitle>
+		</ShowElite>
+		<ShowHot>
+			<PageTitle>热点{$ChannelShortName}</PageTitle>
+		</ShowHot>
+		<ShowVote><![CDATA[<hr><form name="VoteForm" method="post" action="{$strInstallDir}vote.asp" target="_blank"><table><tr><td><h4>您对<font color=red>"{$Title}"</font>的看法是</h2></tr><tr><td>{$VoteBody}<input name="VoteType" type="hidden"value="{$VoteType}"><input name="Action" type="hidden" value="Vote"><input name="ID" type="hidden" value="{$ID}"></td></tr><tr align="center"><td><a href="javascript:VoteForm.submit();"><img src="{$strInstallDir}images/voteSubmit.gif" width="52" height="18" border="0"></a>&nbsp;&nbsp;<a href="{$strInstallDir}Vote.asp?ID={$ID}&Action=Show" target="_blank"><img src="{$strInstallDir}images/voteView.gif" width="52" height="18" border="0"></a></td></tr></table></form>]]></ShowVote>
+		<ArticleList>
+			<t1>没有</t1>
+			<t2>热门</t2>
+			<t3>推荐</t3>
+			<t4>固顶</t4>
+			<t5>普通</t5>
+			<t6>最新</t6>
+			<t7>热点</t7>
+			<Top> 顶</Top>
+			<Elite> 荐</Elite>
+			<Hot> 热</Hot>
+			<UnderClass>此栏目下</UnderClass>
+			<UnderSpecail>此专题下</UnderSpecail>
+			<Title><![CDATA[{$ChannelShortName}标题：{$Title}{$br}作&nbsp;&nbsp;&nbsp;&nbsp;者：{$Author}{$br}更新时间：{$UpdateTime}]]></Title>
+			<UpdateTimeColor_New><![CDATA[color="red"]]></UpdateTimeColor_New>
+			<Content_DIV><![CDATA[style="padding:0px 20px"]]></Content_DIV>
+			<CommentLink><![CDATA[<font color="red">评论</font>]]></CommentLink>
+		</ArticleList>
+		<PicArticle>
+			<NoFound>没有任何图片{$ChannelShortName}</NoFound>
+		</PicArticle>
+		<SlidePicArticle>
+			<LinkTarget>_blank</LinkTarget>
+		</SlidePicArticle>
+		<ArticleContent>
+			<Nologin><![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;你还没注册？或者没有登录？这{$ItemUnit}要求至少是本站的注册会员才能阅读！<br><br>&nbsp;&nbsp;&nbsp;&nbsp;如果你还没注册，请赶紧<a href="{$InstallDir}Reg/User_Reg.asp"><font color=red>点此注册</font></a>吧！<br><br>&nbsp;&nbsp;&nbsp;&nbsp;如果你已经注册但还没登录，请赶紧<a href="{$InstallDir}User/User_Login.asp"><font color=red>点此登录</font></a>吧！<br><br>]]></Nologin>
+			<NoMail>对不起，您尚未通过邮件验证，不能查看收费{$ChannelShortName}</NoMail>
+			<NoCheck>对不起，您尚未通过管理员审核，不能查看收费{$ChannelShortName}</NoCheck>
+			<Overflow_Total>你已经达到或超过有效期内所能查看的信息总数！</Overflow_Total>
+			<Overflow_Today>你已经达到或超过今天所能查看的信息总数！</Overflow_Today>
+			<NeedPoint><![CDATA[<p align="center"><br><br>对不起，阅读本文需要消耗 <b><font color=red>{$NeedPoint}</font></b> {$PointUnit}{$PointName}！而你目前只有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。{$PointName}数不足，无法阅读本文。请与我们联系进行充值。</p>]]></NeedPoint>
+			<ShowPoint>用于查看收费</ShowPoint>
+			<UsePoint><![CDATA[<p align="center"><br><br>阅读本文需要消耗 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}！你目前尚有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。阅读本文后，你将剩下 <b><font color=green>{$FinalPoint}</font></b> {$PointUnit}{$PointName}<br><br>你确实愿意花费 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}来阅读本文吗？<br><br><a href="{$FileName}?Pay=yes&ArticleID={$ArticleID}">我愿意</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$InstallDir}index.asp">我不愿意</a></p>]]></UsePoint>
+			<OutTime><![CDATA[<p align="center"><br><br><font color=red>对不起，本文为收费内容，而您的有效期已经过期，所以无法阅读本文。请与我们联系进行充值。</font></p>]]></OutTime>
+			<Intro>内容简介：</Intro>
+			<Content>内容预览：</Content>
+		</ArticleContent>
+		<ContentPages>
+			<PrevPage>上一页</PrevPage>
+			<NextPage>下一页</NextPage>
+		</ContentPages>
+		<ArticleInfo><![CDATA[作者：{$Author}&nbsp;&nbsp;&nbsp;&nbsp;{$ChannelShortName}来源：{$CopyFrom}&nbsp;&nbsp;&nbsp;&nbsp;点击数：{$Hits}&nbsp;&nbsp;&nbsp;&nbsp;更新时间：{$Time}]]></ArticleInfo>
+		<ArticleEditor><![CDATA[{$ChannelShortName}录入：{$Inputer}&nbsp;&nbsp;&nbsp;&nbsp;责任编辑：{$Editor}&nbsp;]]></ArticleEditor>
+		<ArticleAction><![CDATA[【<a href="{$ChannelUrl}/Comment.asp?ArticleID={$ArticleID}" target="_blank">发表评论</a>】【<a href="{$InstallDir}User/User_Favorite.asp?Action=Add&ChannelID={$ChannelID}&InfoID={$ArticleID}" target="_blank">加入收藏</a>】【<a href="{$ChannelUrl}/SendMail.asp?ArticleID={$ArticleID}" target="_blank">告诉好友</a>】【<a href="{$ChannelUrl}/Print.asp?ArticleID={$ArticleID}" target="_blank">打印此文</a>】【<a href="javascript:window.close();">关闭窗口</a>】]]></ArticleAction>
+		<SendMail>
+			<NoFound>请指定相关文章</NoFound>
+			<NoLogin><![CDATA[<br>&nbsp;&nbsp;&nbsp;&nbsp;你还没注册？或者没有登录？只有本站的注册用户才能使用“告诉好友”功能！<br><br>&nbsp;&nbsp;&nbsp;&nbsp;如果你还没注册，请赶紧<a href="{$InstallDir}Reg/User_Reg.asp"><font color=red>点此注册</font></a>吧！<br><br>&nbsp;&nbsp;&nbsp;&nbsp;如果你已经注册但还没登录，请赶紧<a href="{$InstallDir}User/User_Login.asp"><font color=red>点此登录</font></a>吧！<br><br>]]></NoLogin>
+			<Err1>对不起，服务器没有选定任何邮件发送组件！所以不能使用本功能。</Err1>
+			<Err2>邮件发送组件没有安装！所以不能使用本功能。</Err2>
+			<Err3>对不起，服务器邮件发送组件不对！所以不能使用本功能。</Err3>
+			<Err4>收信人姓名为空！</Err4>
+			<Err5>收信人的Email地址有错误！</Err5>
+			<Err6>邮件发送失败!</Err6>
+			<Err_WebEasyMail>邮件发送失败，请检查WebEasyMail设置！</Err_WebEasyMail>
+			<SuccessMsg>已经成功将此文章发送给你的好友！</SuccessMsg>
+			<ReciveMsg>您的朋友{$UserName}从{$SiteName}给您发来的文章资料</ReciveMsg>
+			<MailBody><![CDATA[<style>A:visited {  TEXT-DECORATION: none   }A:active  { TEXT-DECORATION: none   }A:hover   { TEXT-DECORATION: underline overline }A:link    { text-decoration: none;}A:visited { text-decoration: none;}A:active  { TEXT-DECORATION: none;}A:hover   { TEXT-DECORATION: underline overline}BODY   {    FONT-FAMILY: 宋体; FONT-SIZE: 9pt;}TD     {    FONT-FAMILY: 宋体; FONT-SIZE: 9pt   }</style><TABLE border=0 width="95%" align=center><TBODY><TR><TD valign=middle align=top>--&nbsp;&nbsp;作者：{$Author}<br>--&nbsp;&nbsp;发布时间：{$Time}<br><br>--&nbsp;&nbsp;{$title}<br>--&nbsp;&nbsp;{$Content}<br></TD></TR></TBODY></TABLE><center><a href="{$SiteUrl}">{$SiteName}</a>]]></MailBody>
+		</SendMail>
+		<DefaultAddTemplate></DefaultAddTemplate>
+	</Article>
+	<Soft>
+		<ChannelShortName>下载</ChannelShortName>
+		<AuthorShowType>0</AuthorShowType>
+		<CopyFromShowType>0</CopyFromShowType>
+		<ChannelCount><![CDATA[{$ChannelShortName}总数： {$ItemChecked_Channel} {$ChannelItemUnit}<br>待审{$ChannelShortName}： {$UnItemChecked} {$ChannelItemUnit}<br>评论总数： {$CommentCount_Channel} 条<br>专题总数： {$SpecialCount_Channel} 个<br>{$ChannelShortName}阅读： {$HitsCount_Channel} 人次<br>]]></ChannelCount>
+		<Include>
+			<ClassChar><![CDATA[[{$Text}]]]></ClassChar>
+			<Author><![CDATA[[{$Text}]]]></Author>
+			<Date><![CDATA[[{$Text}]]]></Date>
+			<Hits><![CDATA[[<font color="red">{$Text}</font>]]]></Hits>
+		</Include>
+		<OperatingSystem>Win9x/NT/2000/XP/2003</OperatingSystem>
+		<OperatingSystemEmblem>/</OperatingSystemEmblem>
+		<DownloadUrlTip>下载地址</DownloadUrlTip>
+		<ShowIndex>
+			<PageTitle>首页</PageTitle>
+		</ShowIndex>
+		<ShowClass>
+			<ClassIDErr>请指定栏目ID！</ClassIDErr>
+			<ClassTemplateErr>当前栏目使用的页面模板有误，缺少小类模板！</ClassTemplateErr>
+			<NoChildClass>没有任何子栏目</NoChildClass>
+		</ShowClass>
+		<ShowSoft>
+			<PageTitle>{$ChannelShortName}信息</PageTitle>
+			<SoftIDErr>请指定SoftID！</SoftIDErr>
+			<NoSoft>你要找的{$ChannelShortName}不存在，或者已经被管理员删除！</NoSoft>
+			<SoftLink><![CDATA[<a href="{$DemoUrl}">{$ChannelShortName}演示地址</a>&nbsp;&nbsp;<a href="{$RegUrl}">{$ChannelShortName}注册地址</a>]]></SoftLink>
+			<OnTop><![CDATA[<font color=blue>顶</font>&nbsp;]]></OnTop>
+			<Hot><![CDATA[<font color=red>热</font>&nbsp;]]></Hot>
+			<Elite><![CDATA[<font color=green>荐</font>]]></Elite>
+			<Star>★</Star>
+			<Star_Color>#009999</Star_Color>
+			<NoCorrelative>没有相关{$ChannelShortName}</NoCorrelative>
+		</ShowSoft>
+		<SoftContent>
+			<Nologin><![CDATA[你还没注册？或者没有登录？这{$ChannelItemUnit}{$ChannelShortName}要求至少是本站的注册会员才能下载！<br>如果你还没注册，请赶紧<a href="{$InstallDir}Reg/User_Reg.asp" target="_blank"><font color=red>点此注册</font></a>吧！<br>如果你已经注册但还没登录，请赶紧<a href="{$InstallDir}User/User_Login.asp" target="_blank"><font color=red>点此登录</font></a>吧！]]></Nologin>
+			<NoEmail>对不起，您尚未通过邮件验证，不能下载收费{$ChannelShortName}</NoEmail>
+			<NoCheck>对不起，您尚未通过管理员审核，不能下载收费{$ChannelShortName}</NoCheck>
+			<NoClassPurview><![CDATA[<font color="red">对不起，您没有下载此栏目{$ChannelShortName}的权限！所以没有给您开放下载地址！</font>]]></NoClassPurview>
+			<NeedPoint><![CDATA[对不起，本{$ChannelShortName}为收费{$ChannelShortName}，下载本{$ChannelShortName}需要消耗 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}！而你目前只有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。{$PointName}数不足，无法下载本{$ChannelShortName}。请与我们联系进行充值。]]></NeedPoint>
+			<UsePoint><![CDATA[<p align="center"><br><br>下载本软件需要消耗 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}！你目前尚有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。下载本软件后，你将剩下 <b><font color=green>{$FinalPoint}</font></b> {$PointUnit}{$PointName}<br><br>你确实愿意花费 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}来下载本软件吗？<br><br><a href="{$FileName}?Pay=yes&UrlID={$UrlID}&SoftID={$SoftID}">我愿意</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$InstallDir}index.asp">我不愿意</a></p>]]></UsePoint>
+			<OutTime><![CDATA[<font color=red>对不起，本{$ChannelShortName}为收费{$ChannelShortName}，而您的有效期已经过期，所以无法下载。请与我们联系进行充值。</font>]]></OutTime>
+			<ShowTip><![CDATA[<font color=red><b>注意</b></font>：本{$ChannelShortName}为收费下载，并且下载需要消耗 <font color=red><b>{$InfoPoint}</b></font> {$PointUnit}{$PointName}！&nbsp;&nbsp;若点击任何一个下载地址，意味着你同意消耗相应{$PointName}数来下载。若你不同意，请不要点击任何下载地址！]]></ShowTip>
+		</SoftContent>
+		<ShowSpecial>
+			<PageTitle>[专题]</PageTitle>
+			<SpecialIDErr>请指定SpecialID！</SpecialIDErr>
+			<NoSpecial>找不到指定的专题！</NoSpecial>
+			<Path_Special><![CDATA[<font color=blue>[专题]</font>]]></Path_Special>
+		</ShowSpecial>
+		<ShowSpecialList>
+			<NoSpecial>没有任何专题</NoSpecial>
+		</ShowSpecialList>
+		<ShowSearch>
+			<PageTitle>搜索结果</PageTitle>
+			<SearchInterval>为了避免恶意搜索而消耗大量系统资源，请您在 {$SearchInterval} 秒后再刷新本页！</SearchInterval>
+			<NoFound>没有或没有找到任何{$ChannelShortName}</NoFound>
+			<ResultTitle_All><![CDATA[所有{$ChannelShortName}]]></ResultTitle_All>
+			<ResultTitle_SoftName><![CDATA[名称含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_SoftName>
+			<ResultTitle_SoftIntro><![CDATA[简介含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_SoftIntro>
+			<ResultTitle_Author><![CDATA[作者/开发商名称中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Author>
+			<ResultTitle_Inputer><![CDATA[<font color=red>{$Keyword}</font> 录入的{$ChannelShortName}]]></ResultTitle_Inputer>
+			<ResultTitle_Keyword><![CDATA[关键字中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Keyword>
+			<Content_Lenght>200</Content_Lenght>
+		</ShowSearch>
+		<ShowNew>
+			<PageTitle>最新{$ChannelShortName}</PageTitle>
+		</ShowNew>
+		<ShowElite>
+			<PageTitle>推荐{$ChannelShortName}</PageTitle>
+		</ShowElite>
+		<ShowHot>
+			<PageTitle>热点{$ChannelShortName}</PageTitle>
+		</ShowHot>
+		<ShowVote><![CDATA[<hr><form name="VoteForm" method="post" action="{$strInstallDir}vote.asp" target="_blank"><table><tr><td><h4>您对<font color=red>"{$Title}"</font>的看法是</h2></tr><tr><td>{$VoteBody}<input name="VoteType" type="hidden"value="{$VoteType}"><input name="Action" type="hidden" value="Vote"><input name="ID" type="hidden" value="{$ID}"></td></tr><tr align="center"><td><a href="javascript:VoteForm.submit();"><img src="{$strInstallDir}images/voteSubmit.gif" width="52" height="18" border="0"></a>&nbsp;&nbsp;<a href="{$strInstallDir}Vote.asp?ID={$ID}&Action=Show" target="_blank"><img src="{$strInstallDir}images/voteView.gif" width="52" height="18" border="0"></a></td></tr></table></form>]]></ShowVote>
+		<SoftList>
+			<t1>没有</t1>
+			<t2>热门</t2>
+			<t3>推荐</t3>
+			<t4>固顶</t4>
+			<t5>普通</t5>
+			<t6>最新</t6>
+			<t7>热点</t7>
+			<UnderClass>此栏目下</UnderClass>
+			<UnderSpecail>此专题下</UnderSpecail>
+			<Title><![CDATA[{$ChannelShortName}名称：{$SoftName}{$br}作&nbsp;&nbsp;&nbsp;&nbsp;者：{$Author}{$br}更新时间：{$UpdateTime}]]></Title>
+			<Title2><![CDATA[{$ChannelShortName}名称：{$SoftName}{$br}{$ChannelShortName}版本：{$SoftVersion}{$br}作&nbsp;&nbsp;&nbsp;&nbsp;者：{$Author}{$br}更新时间：{$UpdateTime}]]></Title2>
+			<UpdateTimeColor_New><![CDATA[color="red"]]></UpdateTimeColor_New>
+			<Content_DIV><![CDATA[style="padding:0px 20px"]]></Content_DIV>
+		</SoftList>
+		<PicSoft>
+			<NoFound>没有任何图片{$ChannelShortName}</NoFound>
+		</PicSoft>
+		<SlidePicSoft>
+			<LinkTarget>_blank</LinkTarget>
+		</SlidePicSoft>
+	</Soft>
+	<Photo>
+		<ChannelShortName>图片</ChannelShortName>
+		<AuthorShowType>0</AuthorShowType>
+		<CopyFromShowType>0</CopyFromShowType>
+		<ChannelCount><![CDATA[{$ChannelShortName}总数： {$ItemChecked_Channel} {$ChannelItemUnit}<br>待审{$ChannelShortName}： {$UnItemChecked} {$ChannelItemUnit}<br>评论总数： {$CommentCount_Channel} 条<br>专题总数： {$SpecialCount_Channel} 个<br>{$ChannelShortName}阅读： {$HitsCount_Channel} 人次<br>]]></ChannelCount>
+		<Include>
+			<ClassChar><![CDATA[[{$Text}]]]></ClassChar>
+			<Author><![CDATA[[{$Text}]]]></Author>
+			<Date><![CDATA[[{$Text}]]]></Date>
+			<Hits><![CDATA[[<font color="red">{$Text}</font>]]]></Hits>
+		</Include>
+		<ShowIndex>
+			<PageTitle>首页</PageTitle>
+		</ShowIndex>
+		<ShowClass>
+			<ClassIDErr>请指定栏目ID！</ClassIDErr>
+			<ClassTemplateErr>当前栏目使用的页面模板有误，缺少小类模板！</ClassTemplateErr>
+			<NoChildClass>没有任何子栏目</NoChildClass>
+		</ShowClass>
+		<ShowPhoto>
+			<PageTitle>{$ChannelShortName}信息</PageTitle>
+			<PhotoIDErr>请指定PhotoID！</PhotoIDErr>
+			<NoPhoto>你要找的{$ChannelShortName}不存在，或者已经被管理员删除！</NoPhoto>
+			<OnTop><![CDATA[<font color=blue>顶</font>&nbsp;]]></OnTop>
+			<Hot><![CDATA[<font color=red>热</font>&nbsp;]]></Hot>
+			<Elite><![CDATA[<font color=green>荐</font>]]></Elite>
+			<Star>★</Star>
+			<Star_Color>#009999</Star_Color>
+			<NoCorrelative>没有相关{$ChannelShortName}</NoCorrelative>
+		</ShowPhoto>
+		<ShowSpecial>
+			<PageTitle>[专题]</PageTitle>
+			<SpecialIDErr>请指定SpecialID！</SpecialIDErr>
+			<NoSpecial>找不到指定的专题！</NoSpecial>
+			<Path_Special><![CDATA[<font color=blue>[专题]</font>]]></Path_Special>
+		</ShowSpecial>
+		<ShowSpecialList>
+			<NoSpecial>没有任何专题</NoSpecial>
+		</ShowSpecialList>
+		<ShowSearch>
+			<PageTitle>搜索结果</PageTitle>
+			<SearchInterval>为了避免恶意搜索而消耗大量系统资源，请您在 {$SearchInterval} 秒后再刷新本页！</SearchInterval>
+			<NoFound>没有或没有找到任何{$ChannelShortName}</NoFound>
+			<ResultTitle_All><![CDATA[所有{$ChannelShortName}]]></ResultTitle_All>
+			<ResultTitle_PhotoName><![CDATA[名称含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_PhotoName>
+			<ResultTitle_PhotoIntro><![CDATA[简介含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_PhotoIntro>
+			<ResultTitle_Author><![CDATA[作者/开发商名称中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Author>
+			<ResultTitle_Inputer><![CDATA[<font color=red>{$Keyword}</font> 录入的{$ChannelShortName}]]></ResultTitle_Inputer>
+			<ResultTitle_Keyword><![CDATA[关键字中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Keyword>
+			<Content_Lenght>200</Content_Lenght>
+		</ShowSearch>
+		<ShowNew>
+			<PageTitle>最新{$ChannelShortName}</PageTitle>
+		</ShowNew>
+		<ShowElite>
+			<PageTitle>推荐{$ChannelShortName}</PageTitle>
+		</ShowElite>
+		<ShowHot>
+			<PageTitle>热点{$ChannelShortName}</PageTitle>
+		</ShowHot>
+		<ShowVote><![CDATA[<hr><form name="VoteForm" method="post" action="{$strInstallDir}vote.asp" target="_blank"><table><tr><td><h4>您对<font color=red>"{$Title}"</font>的看法是</h2></tr><tr><td>{$VoteBody}<input name="VoteType" type="hidden"value="{$VoteType}"><input name="Action" type="hidden" value="Vote"><input name="ID" type="hidden" value="{$ID}"></td></tr><tr align="center"><td><a href="javascript:VoteForm.submit();"><img src="{$strInstallDir}images/voteSubmit.gif" width="52" height="18" border="0"></a>&nbsp;&nbsp;<a href="{$strInstallDir}Vote.asp?ID={$ID}&Action=Show" target="_blank"><img src="{$strInstallDir}images/voteView.gif" width="52" height="18" border="0"></a></td></tr></table></form>]]></ShowVote>
+		<PhotoList>
+			<t1>没有</t1>
+			<t2>热门</t2>
+			<t3>推荐</t3>
+			<t4>固顶</t4>
+			<t5>普通</t5>
+			<t6>最新</t6>
+			<t7>热点</t7>
+			<UnderClass>此栏目下</UnderClass>
+			<UnderSpecail>此专题下</UnderSpecail>
+			<Title><![CDATA[{$ChannelShortName}名称：{$PhotoName}{$br}作&nbsp;&nbsp;&nbsp;&nbsp;者：{$Author}{$br}更新时间：{$UpdateTime}]]></Title>
+			<UpdateTimeColor_New><![CDATA[color="red"]]></UpdateTimeColor_New>
+			<Content_DIV><![CDATA[style="padding:0px 20px"]]></Content_DIV>
+		</PhotoList>
+		<PicPhoto>
+			<NoFound>没有任何{$ChannelShortName}</NoFound>
+		</PicPhoto>
+		<SlidePicPhoto>
+			<LinkTarget>_blank</LinkTarget>
+		</SlidePicPhoto>
+		<PhotoContent>
+			<Nologin><![CDATA[你还没注册？或者没有登录？这{$ChannelItemUnit}{$ChannelShortName}要求至少是本站的注册会员才能查看！<br>如果你还没注册，请赶紧<a href="{$InstallDir}Reg/User_Reg.asp"><font color=red>点此注册</font></a>吧！<br>如果你已经注册但还没登录，请赶紧<a href="{$InstallDir}User/User_Login.asp"><font color=red>点此登录</font></a>吧！<br>]]></Nologin>
+			<NoEmail>对不起，您尚未通过邮件验证，不能查看收费{$ChannelShortName}</NoEmail>
+			<NoCheck>对不起，您尚未通过管理员审核，不能查看收费{$ChannelShortName}</NoCheck>
+			<NeedPoint><![CDATA[对不起，本{$ChannelShortName}为收费{$ChannelShortName},并且查看本{$ChannelShortName}需要消耗 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}！而你目前只有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。{$PointName}数不足，无法查看本{$ChannelShortName}。请与我们联系进行充值。]]></NeedPoint>
+			<ConsumeLog_Remark>用于查看收费{$ChannelShortName}：{$PhotoName}</ConsumeLog_Remark>
+			<UsePoint><![CDATA[<p align="center"><br><br>查看此图需要消耗 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}！你目前尚有 <b><font color=blue>{$NowPoint}</font></b> {$PointUnit}{$PointName}可用。查看此图后，你将剩下 <b><font color=green>{$FinalPoint}</font></b> {$PointUnit}{$PointName}<br><br>你确实愿意花费 <b><font color=red>{$InfoPoint}</font></b> {$PointUnit}{$PointName}来阅读本文吗？<br><br><a href="{$FileName}?Pay=yes&PhotoID={$PhotoID}">我愿意</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{$InstallDir}index.asp">我不愿意</a></p>]]></UsePoint>
+			<OutTime><![CDATA[<font color=red>对不起，本{$ChannelShortName}为收费图片，而您的有效期已经过期，所以无法查看。请与我们联系进行充值。</font>]]></OutTime>
+			<Intro>内容简介：</Intro>
+			<Content>内容预览：</Content>
+		</PhotoContent>
+		<ViewPhoto>
+			<NoFound>图片地址错误！</NoFound>
+			<iframe><![CDATA[<iframe id="PhotoViewer" width="100%" height="100%" scrolling="yes" frameborder="1" src="{$ChannelUrl}/ViewPhoto.asp?PhotoUrl={$Url}"></iframe>]]></iframe>
+			<Link><![CDATA[<a href="{$Url}" target="_blank"><b>点此查看</b></a>]]></Link>
+		</ViewPhoto>
+	</Photo>
+	<Guest>
+		<FirstPage>留言首页</FirstPage>
+		<ChannelShortName>留言</ChannelShortName>
+		<IPlock><![CDATA[对不起！您的IP（{$UserTrueIP}）被系统限制。或者您可以和站长联系。]]></IPlock>
+		<ShowIndex>
+			<PageTitle1>保存留言</PageTitle1>
+			<PageTitle2>删除留言</PageTitle2>
+			<PageTitle3>我回复的留言</PageTitle3>
+			<PageTitle2>我发表的留言</PageTitle2>
+			<SearchEd>搜索结果</SearchEd>
+			<Err1>输入的类别并不存在！</Err1>
+			<PageChar>条留言</PageChar>
+		</ShowIndex>
+		<ShowReply>
+			<NoTopicID>请指定留言主题ID！</NoTopicID>
+			<PageTitle>查看留言</PageTitle>
+			<PageChar>条贴子</PageChar>
+		</ShowReply>
+		<ShowWrite>
+			<Notpermission>您尚未登录，请登录后再进行您的操作！</Notpermission>
+			<PageTitle1>编辑留言</PageTitle1>
+			<PageTitle2>签写留言</PageTitle2>
+		</ShowWrite>
+		<HTML_Index>
+			<PageChar>条主题</PageChar>
+		</HTML_Index>
+		<GuestBook_Top>
+			<Logined><![CDATA[<a href="{$FileName}?action=user"><img align=absmiddle src="images/Guest_user.gif" alt="我发表的留言" border="0"></a>&nbsp;<a href="{$FileName}?action=user&topictype=participation"><img align="absmiddle" src="images/Guest_participation.gif" alt="我回复的留言" border="0"></a>&nbsp;]]></Logined>
+			<NoLogin><![CDATA[<a href="{$FileName}"><img align=absmiddle src="images/Guest_all.gif" alt="查看所有留言" border="0"></a>&nbsp;<a href="Guest_Write.asp?KindID={$KindID}&KindName={$KindName}"><img align="absmiddle" src="images/Guest_write.gif" alt="签写新的留言" border="0"></a>]]></NoLogin>
+		</GuestBook_Top>
+		<GuestBook_Mode>
+			<Mode1>用户模式</Mode1>
+			<Mode2>游客模式</Mode2>
+		</GuestBook_Mode>
+		<GuestBook_See>
+			<Mode1>讨论区方式</Mode1>
+			<Mode2>留言板方式</Mode2>
+		</GuestBook_See>
+		<GuestBook_Appear>
+			<Mode1>直接发表</Mode1>
+			<Mode2>审核发表</Mode2>
+			<Count>有{$GuestNo}条待审核</Count>
+		</GuestBook_Appear>
+		<GuestBook_Search><![CDATA[<table border="0" cellpadding="0" cellspacing="0"><form method="post" name="SearchForm" action="Search.asp"><tr><td height="30" >&nbsp;&nbsp;<select name="Field" id="1"><option value="Title" selected>留言主题</option><option value="Content">留言内容</option><option value="Name">留言人</option><option value="GuestTime">留言时间</option><option value="Reply">管理员回复</option></select>&nbsp;</td><td height="30" >&nbsp;&nbsp;<select name="KindID" id="KindID">{$KindID}</select>&nbsp;</td><td height="30" >&nbsp;&nbsp;<input type="text" name="keyword"  size="15" value="关键字" maxlength="45" onFocus="this.select();">&nbsp;<input type="submit" name="Submit"  value="搜索"></td></tr></form></table>]]></GuestBook_Search>
+		<SearchResult>
+			<t1>所有留言</t1>
+			<t2><![CDATA[主题含有 <font class=Channel_font>{$Keyword}</font>的留言]]></t2>
+			<t3><![CDATA[内容含有 <font class=Channel_font>{$Keyword}</font>的留言]]></t3>
+			<t4><![CDATA[留言人含有 <font class=Channel_font>{$Keyword}</font>的留言]]></t4>
+			<t5><![CDATA[管理员回复含有 <font class=Channel_font>{$Keyword}</font>的留言]]></t5>
+			<t6><![CDATA[留言时间为<font class=Channel_font>{$Keyword}</font> 的留言]]></t6>
+		</SearchResult>
+		<ShowAllGuest>
+			<NoFound>没有任何留言</NoFound>
+			<Err1>输入的关键字不是有效日期！</Err1>
+		</ShowAllGuest>
+		<GuestBookShow>
+			<Del>（已删除）</Del>
+			<UnKnow>未填</UnKnow>
+			<Tip1><![CDATA[ 姓名：{$Name} {$Sex}<br> 主页：{$Homepage}<br> OICQ：{$Oicq}<br> 信箱：{$Email}<br> 地址：{$GuestIP}<br> 时间：{$Time}]]></Tip1>
+			<Tip2><![CDATA[用户相关资料保密。]]></Tip2>
+			<p1>固顶留言</p1>
+			<p2>精华留言</p2>
+			<p3>有回复</p3>
+			<p4>无回复</p4>
+			<p5>回复：</p5>
+			<p6>主题：</p6>
+			<GuestImages><![CDATA[<img src="{$GuestImages}.gif" width="80" height="90" onMouseOut="toolTip();" onMouseOver="toolTip('{$GuestTip}');">]]></GuestImages>
+			<User><![CDATA[<font class=Guest_font>用户</font>]]></User>
+			<Guest><![CDATA[游客]]></Guest>
+			<Hide1><![CDATA[ **************************************<br> * 隐藏留言，管理员和留言用户可以看到 *<br> **************************************]]></Hide1>
+			<Hide2>[隐藏]</Hide2>
+			<Hide3><![CDATA[ **************************************<br> * 隐藏管理员回复，管理员和留言用户可以看到 *<br> **************************************]]></Hide3>
+			<Reply1><![CDATA[ 回复主题：{$ReplyTitle} &nbsp;&nbsp;&nbsp;&nbsp;回复人:{$ReplyGuest}]]></Reply1>
+			<Reply2><![CDATA[ 管理员[{$ReplyAdmin}]回复:]]></Reply2>
+			<Reply3>回复时间:</Reply3>
+			<Reply4>回复这条留言</Reply4>
+			<Reply5>编辑这条留言</Reply5>
+			<Reply6>确定要删除此留言吗？</Reply6>
+			<Reply7>删除这条留言</Reply7>
+			<Reply8>查看全部回复</Reply8>
+			<Reply9>共有回复{$ReplyNum}条</Reply9>
+			<Reply10>回复这条留言</Reply10>
+			<Reply11>返回列表</Reply11>
+		</GuestBookShow>
+		<ReplyGuest>
+			<NoFound>没有任何留言</NoFound>
+			<Err1>请指定要回复的留言ID！</Err1>
+		</ReplyGuest>
+		<EditGuest>
+			<NoFound>找不到您指定的留言！</NoFound>
+			<Err1>请指定要编辑的留言ID！</Err1>
+			<Err2>用户只可以编辑自己发表的且未通过审核留言！</Err2>
+			<Err3>未审核的留言不能回复！若要编辑未审核的留言，请切换到留言本方式编辑！</Err3>
+		</EditGuest>
+		<DelGuest>
+			<NoFound>找不到您指定的留言！</NoFound>
+			<Err1>请指定要删除的留言ID！</Err1>
+			<Err2>您没有使用此功能的权限！</Err2>
+			<SurMsg>删除留言成功！</SurMsg>
+		</DelGuest>
+		<ShowGueststyle>
+			<Mode1>切换到留言本方式</Mode1>
+			<Mode2>切换到讨论区方式</Mode2>
+		</ShowGueststyle>
+		<SaveGuest>
+			<Notpermission>您尚未登录，请登录后再进行您的操作！</Notpermission>
+			<ForbiddenAD>您输入的内容涉嫌广告，禁止留言！</ForbiddenAD>
+			<Err1>验证码不能为空！</Err1>
+			<Err2>你发留言时间过长，请重发留言。</Err2>
+			<Err3>您输入的确认码和系统产生的不一致！请重新输入。</Err3>
+			<Err4>留言发送失败！请将必要的信息填写完整！</Err4>
+			<Err5>请指定要编辑的留言ID！</Err5>
+			<Err6>请不要连续发送内容相同的留言或空留言！</Err6>
+			<Err7>找不到您回复的主题！</Err7>
+			<SurMsg1>留言编辑成功</SurMsg1>
+			<SurMsg2>留言编辑成功！只有管理员审核通过的留言才会显示出来。</SurMsg2>
+			<SurMsg3>您的留言已经发送成功！</SurMsg3>
+			<SurMsg4>您的留言已经发送成功！只有管理员审核通过的留言才会显示出来。</SurMsg4>
+		</SaveGuest>
+		<Guest_info><![CDATA[<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"><tr align="center"><td class="Guest_title_760">留言操作反馈信息</td></tr><tr><td class="main_tdbg_575"><table cellpadding="5" cellspacing="0" border="0" width="100%" align="center"><tr><td height="100" valign="top">{$info}</td></tr><tr align="center" class="tdbg"><td><a href="{$FileName}">【查看留言】</a><a href="Guest_Write.asp">【签写留言】</a></td></tr></table></td></tr></table><br>]]></Guest_info>
+		<KindList>
+			<Nofound>没有任何类别</Nofound>
+		</KindList>
+		<discussionShow>
+			<Text>发言主题|||所有主题|||留言人|||回复|||阅读|||最后回复|||固顶留言|||精华留言|||有回复|||无回复|||点击查看记录具体信息</Text>
+			<AdminReply><![CDATA[管理员[{$Admin}]回复此留言>{$ReplyDatetime}<font class=Channel_font> | [{$GuestReplyAdmin}]</font>]]></AdminReply>
+		</discussionShow>
+		<TransformTime>
+			<d1>今天 </d1>
+			<d2>昨天 </d2>
+			<d3>前天 </d3>
+		</TransformTime>
+	</Guest>
+	<Product>
+		<ChannelShortName>商品</ChannelShortName>
+		<ProducerShowType>0</ProducerShowType>
+		<TrademarkShowType>0</TrademarkShowType>
+		<ChannelCount><![CDATA[{$ChannelShortName}总数： {$ItemChecked_Channel} {$ChannelItemUnit}<br>评论总数： {$CommentCount_Channel} 条<br>专题总数： {$SpecialCount_Channel} 个<br>]]></ChannelCount>
+		<ShowTips_GuestBuy><![CDATA[<br><br><p align="center">请先<a href="../User/User_Login.asp">登录</a>！</p>]]></ShowTips_GuestBuy>
+		<ShowTips_Login><![CDATA[<font color="#0000FF">温馨提示：</font><font color="#006600">您还没有注册或登录，请先<a href="../Reg/User_Reg.asp">注册</a>或<a href="../User/User_Login.asp">登录</a>，以获得更多优惠！</font>]]></ShowTips_Login>
+		<ShowTips_CartIsEmpty><![CDATA[<br><br><br><br>您好！目前您的购物车中没有任何商品，是不是<a href="ShowElite.asp"><font color="#FF0000">继续购物</font></a>？<br><br><br><br><br><br>]]></ShowTips_CartIsEmpty>
+		<Include>
+			<ClassChar><![CDATA[[{$Text}]]]></ClassChar>
+			<Date><![CDATA[[{$Text}]]]></Date>
+		</Include>
+		<ShowIndex>
+			<PageTitle>首页</PageTitle>
+		</ShowIndex>
+		<ShowClass>
+			<ClassIDErr>请指定栏目ID！</ClassIDErr>
+			<ClassTemplateErr>当前栏目使用的页面模板有误，缺少小类模板！</ClassTemplateErr>
+			<NoChildClass>没有任何子栏目</NoChildClass>
+		</ShowClass>
+		<ShowProduct>
+			<PageTitle>{$ChannelShortName}信息</PageTitle>
+			<ProductIDErr>请指定ProductID！</ProductIDErr>
+			<NoProduct>你要找的{$ChannelShortName}不存在，或者已经被管理员删除！</NoProduct>
+			<OnTop><![CDATA[<font color=blue>顶</font>&nbsp;]]></OnTop>
+			<Hot><![CDATA[<font color=red>热</font>&nbsp;]]></Hot>
+			<Elite><![CDATA[<font color=green>荐</font>]]></Elite>
+			<Star>★</Star>
+			<Star_Color>#009999</Star_Color>
+			<NoCorrelative>没有相关{$ChannelShortName}</NoCorrelative>
+		</ShowProduct>
+		<ShowSpecial>
+			<PageTitle>[专题]</PageTitle>
+			<SpecialIDErr>请指定SpecialID！</SpecialIDErr>
+			<NoSpecial>找不到指定的专题！</NoSpecial>
+			<Path_Special><![CDATA[<font color=blue>[专题]</font>]]></Path_Special>
+		</ShowSpecial>
+		<ShowSpecialList>
+			<NoSpecial>没有任何专题</NoSpecial>
+		</ShowSpecialList>
+		<ShowSearch>
+			<PageTitle>搜索结果</PageTitle>
+			<SearchInterval>为了避免恶意搜索而消耗大量系统资源，请您在 {$SearchInterval} 秒后再刷新本页！</SearchInterval>
+			<NoFound>没有或没有找到任何{$ChannelShortName}</NoFound>
+			<ResultTitle_All><![CDATA[所有{$ChannelShortName}]]></ResultTitle_All>
+			<ResultTitle_ProductName><![CDATA[名称含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_ProductName>
+			<ResultTitle_ProductIntro><![CDATA[简介含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_ProductIntro>
+			<ResultTitle_ProductExplain><![CDATA[介绍含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_ProductExplain>
+			<ResultTitle_ProducerName><![CDATA[厂商为 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_ProducerName>
+			<ResultTitle_TrademarkName><![CDATA[品牌/商标为 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_TrademarkName>
+			<ResultTitle_Keyword><![CDATA[关键字中含有 <font color=red>{$Keyword}</font> 的{$ChannelShortName}]]></ResultTitle_Keyword>
+			<Content_Lenght>200</Content_Lenght>
+		</ShowSearch>
+		<ShowNew>
+			<PageTitle>最新{$ChannelShortName}</PageTitle>
+		</ShowNew>
+		<ShowElite>
+			<PageTitle>推荐{$ChannelShortName}</PageTitle>
+		</ShowElite>
+		<ShowHot>
+			<PageTitle>热点{$ChannelShortName}</PageTitle>
+		</ShowHot>
+		<ShowDiscount>
+			<PageTitle>特价{$ChannelShortName}</PageTitle>
+		</ShowDiscount>
+		<ShopInfo>
+			<PageTitle>购物指南</PageTitle>
+		</ShopInfo>
+		<ShowVote><![CDATA[<hr><form name="VoteForm" method="post" action="{$strInstallDir}vote.asp" target="_blank"><table><tr><td><h4>您对<font color=red>"{$Title}"</font>的看法是</h2></tr><tr><td>{$VoteBody}<input name="VoteType" type="hidden"value="{$VoteType}"><input name="Action" type="hidden" value="Vote"><input name="ID" type="hidden" value="{$ID}"></td></tr><tr align="center"><td><a href="javascript:VoteForm.submit();"><img src="{$strInstallDir}images/voteSubmit.gif" width="52" height="18" border="0"></a>&nbsp;&nbsp;<a href="{$strInstallDir}Vote.asp?ID={$ID}&Action=Show" target="_blank"><img src="{$strInstallDir}images/voteView.gif" width="52" height="18" border="0"></a></td></tr></table></form>]]></ShowVote>
+		<ProductList>
+			<t1>没有</t1>
+			<t2>热门</t2>
+			<t3>推荐</t3>
+			<t4>固顶</t4>
+			<t5>普通</t5>
+			<t6>最新</t6>
+			<t7>热点</t7>
+			<UnderClass>此栏目下</UnderClass>
+			<UnderSpecail>此专题下</UnderSpecail>
+			<UpdateTimeColor_New><![CDATA[color="red"]]></UpdateTimeColor_New>
+			<Content_DIV><![CDATA[style="padding:0px 20px"]]></Content_DIV>
+		</ProductList>
+		<PicProduct>
+			<NoFound>没有任何图片{$ChannelShortName}</NoFound>
+		</PicProduct>
+		<SlidePicProduct>
+			<LinkTarget>_blank</LinkTarget>
+		</SlidePicProduct>
+		<ProductPrice>
+			<Price>商城价：</Price>
+			<Price_Market>市场价：</Price_Market>
+			<Price_Member>会员价：</Price_Member>
+			<Price_Original>原价：</Price_Original>
+			<Price_Te>特价：</Price_Te>
+			<Price_Time>时间：</Price_Time>
+		</ProductPrice>
+		<NoPrice>待定</NoPrice>
+		<NoPrice_Member>—</NoPrice_Member>
+		<NoPrice_Market>—</NoPrice_Market>
+	</Product>
+	<SupplyInfo>
+		<ChannelShortName>供求信息</ChannelShortName>
+		<SupplyPro1>[图文]</SupplyPro1>
+		<SupplyAction><![CDATA[【<a href="{$ChannelUrl}/Comment.asp?SupplyID={$SupplyID}" target="_blank">发表评论</a>】【<a href="{$InstallDir}User/User_Favorite.asp?Action=Add&ChannelID={$ChannelID}&InfoID={$SupplyID}" target="_blank">加入收藏</a>】【<a href="javascript:window.close();">关闭窗口</a>】]]></SupplyAction>
+		<AdminReplayTypeJs><![CDATA[<tr><td>&nbsp;</td><td colspan="5"><font color="009900">★</font>&nbsp;发布人『<font color="blue">{$AdminName}</font>』于 {$ReplyTime} 回复道：&nbsp;&nbsp;&nbsp;&nbsp;{$ReplyContent}<br></td></tr>]]></AdminReplayTypeJs>
+		<SupplyType>
+			<Type Point="0">供应</Type>
+			<Type Point="0">求购</Type>
+			<Type Point="0">紧急求购</Type>
+			<Type Point="0">寻求合作</Type>
+			<Type Point="0">诚招代理</Type>
+		</SupplyType>
+		<TradeType>
+			<Type>当面交易</Type>
+			<Type>邮购</Type>
+		</TradeType>
+		<ShowNew>
+			<PageTitle>最新{$ChannelShortName}</PageTitle>
+		</ShowNew>
+		<ShowElite>
+			<PageTitle>推荐{$ChannelShortName}</PageTitle>
+		</ShowElite>
+		<ShowHot>
+			<PageTitle>热点{$ChannelShortName}</PageTitle>
+		</ShowHot>
+		<ShowSupply>
+			<PageTitle>{$ChannelShortName}正文</PageTitle>
+			<NoSupply>你要找的{$ChannelShortName}不存在，或者已经被管理员删除！</NoSupply>
+		</ShowSupply>
+	</SupplyInfo>
+	<Job>
+		<ShowPosition>
+			<PositionID>编号</PositionID>
+			<PositionName>职位名称</PositionName>
+			<WorkPlaceName>工作地点</WorkPlaceName>
+			<SubCompanyName>用人单位</SubCompanyName>
+			<PositionNum>招聘人数</PositionNum>
+			<PositionStatus>职位状态</PositionStatus>
+			<ValidDate>有效期</ValidDate>
+			<ReleaseDate>发布日期</ReleaseDate>
+
+			<PositionIDLen>60</PositionIDLen>
+			<PositionNameLen>80</PositionNameLen>
+			<WorkPlaceNameLen>80</WorkPlaceNameLen>
+			<SubCompanyNameLen>120</SubCompanyNameLen>
+			<PositionNumLen>60</PositionNumLen>
+			<PositionStatusLen>60</PositionStatusLen>
+			<ValidDateLen>80</ValidDateLen>
+			<ReleaseDateLen>80</ReleaseDateLen>
+		</ShowPosition>
+		<ShowSearch>
+			<NoFound>没有或没有找到任何职位信息</NoFound>
+			<PositionID>编号</PositionID>
+			<PositionName>职位名称</PositionName>
+			<WorkPlaceName>工作地点</WorkPlaceName>
+			<SubCompanyName>用人单位</SubCompanyName>
+			<PositionNum>招聘人数</PositionNum>
+			<PositionStatus>职位状态</PositionStatus>
+			<ValidDate>有效期</ValidDate>
+			<ReleaseDate>发布日期</ReleaseDate>
+
+			<PositionIDLen>55</PositionIDLen>
+			<PositionNameLen>120</PositionNameLen>
+			<WorkPlaceNameLen>120</WorkPlaceNameLen>
+			<SubCompanyNameLen>120</SubCompanyNameLen>
+			<PositionNumLen>120</PositionNumLen>
+			<PositionStatusLen>120</PositionStatusLen>
+			<ValidDateLen>120</ValidDateLen>
+			<ReleaseDateLen>120</ReleaseDateLen>
+		</ShowSearch>
+	</Job>
+	<Collection>
+		<TimingRefurbishTime>10</TimingRefurbishTime>
+		<CollectionRefurbishTime>3</CollectionRefurbishTime>
+	</Collection>
+</Chinese>

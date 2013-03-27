@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>网站友情链接</title>
+<script language="javascript">
+    function objectTag() {
+    var reval,LinkType,ShowType,IsOnlyElite,IsElitFirst,OrderType;
+    for (var i=0;i<document.form1.LinkType.length;i++){
+        var PowerEasy = document.form1.LinkType[i];
+        if (PowerEasy.checked==true)       
+            LinkType = PowerEasy.value
+        }
+    for (var i=0;i<document.form1.ShowType.length;i++){
+        var PowerEasy = document.form1.ShowType[i];
+        if (PowerEasy.checked==true)       
+            ShowType = PowerEasy.value
+    }
+    for (var i=0;i<document.form1.IsOnlyElite.length;i++){
+        var PowerEasy = document.form1.IsOnlyElite[i];
+        if (PowerEasy.checked==true)       
+            IsOnlyElite = PowerEasy.value
+    }
+    for (var i=0;i<document.form1.IsElitFirst.length;i++){
+        var PowerEasy = document.form1.IsElitFirst[i];
+        if (PowerEasy.checked==true)       
+            IsElitFirst = PowerEasy.value
+    }
+    for (var i=0;i<document.form1.OrderType.length;i++){
+        var PowerEasy = document.form1.OrderType[i];
+        if (PowerEasy.checked==true)       
+            OrderType = PowerEasy.value
+    }
+    reval='{$ShowFriendSite('+LinkType+','+document.form1.SiteNum.value+','+document.form1.Cols.value+','+ShowType+','+document.form1.KindID.value+','+document.form1.SpecialID.value+','+document.form1.width.value+','+IsOnlyElite+','+IsElitFirst+','+OrderType+')}';
+    window.returnValue = reval;
+    window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+  <tr class='title'>
+    <td colspan="2" align="center"><strong>显示网站友情链接标签设置：</strong></td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'>友情链接方式：</td>
+    <td>
+        <input type="radio" name="LinkType" checked value="1">Logo链接
+        <input type="radio" name="LinkType" value="2">文字链接</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'>最多显示站点数：</td>
+    <td><input name="SiteNum" type="text" size="12" value="14">个</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'>分 几 列 显 示：</td>
+    <td><input name="Cols" type="text" size="12" value="2">列</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'>链接显示方式：</td>
+    <td>
+        <input type="radio" name="ShowType" value="1">向上滚动<br>
+        <input type="radio" name="ShowType" value="2" checked>横向列表<br>
+        <input type="radio" name="ShowType" value="3">下拉列表<br>
+        <input type="radio" name="ShowType" value="4" checked>为输出DIV格式<br>
+    </td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'>所属类别：</td>
+    <td><input name="KindID" type="text" size="12" value="14">ID</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'> 所属专题：</td>
+    <td><input name="SpecialID" type="text" size="12" value="14">ID</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right"  class='tdbg5'> 设置表格宽度：</td>
+    <td><input name="width" type="text" size="12" value="200"></td>
+  </tr>
+  <tr class='tdbg'  class='tdbg5'>
+    <td align="right" class='tdbg5'>是否只显示推荐：</td>
+    <td>
+        <input type="radio" name="IsOnlyElite" value="true">是
+        <input type="radio" name="IsOnlyElite" value="false" checked>否
+    </td>
+  </tr>
+  <tr class='tdbg'  class='tdbg5'>
+    <td align="right"  class='tdbg5'>是否推荐优先：</td>
+    <td>
+        <input type="radio" name="IsElitFirst" value="true">是
+        <input type="radio" name="IsElitFirst" value="false" checked>否
+    </td>
+  </tr>
+  <tr class='tdbg'  class='tdbg5'>
+    <td align="right"  class='tdbg5'>排序方式：</td>
+    <td>
+        <input type="radio" name="OrderType" value="1" checked>友情链接ID升序<br>
+        <input type="radio" name="OrderType" value="2" >友情链接ID降序<br>
+        <input type="radio" name="OrderType" value="3">排序ID升序<br>
+        <input type="radio" name="OrderType" value="4">排序ID降序<br>
+        <input type="radio" name="OrderType" value="5" >网站评分等级升序<br>
+        <input type="radio" name="OrderType" value="6" >网站评分等级降序<br>
+    </td>
+  </tr>
+  <tr class='tdbg'  class='tdbg5'>
+    <td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

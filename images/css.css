@@ -1,0 +1,311 @@
+#Txt H2 A,#Txt H2 A:visited {
+color:#5998CC;
+text-decoration:none;
+}
+
+#Txt H2 A:hover,#Txt H2 A:active {
+color:#5998CC;
+text-decoration:underline;
+}
+
+#PN #pre:visited,#PN #next:visited {
+color:#009;
+}
+
+#PN #pre:hover,#PN #next:hover {
+text-decoration:underline;
+}
+#ImgPlayer {
+border:#D6D9DA 1px solid;
+background:#F5F5F5;
+overflow:hidden;
+width:605px;
+height:352px;
+padding:1px;
+}
+
+
+#ImgBlk {
+float:left;
+width:440px;
+height:339px;
+padding:5px;
+}
+
+
+#ImgNum {
+overflow:hidden;
+height:37px;
+}
+
+#ImgNum UL {
+float:left;
+width:360px;
+cursor:default;
+padding:0;
+}
+
+#ImgNum LI {
+font-size:9px;
+float:left;
+overflow:hidden;
+width:30px;
+cursor:pointer;
+line-height:25px;
+margin-right:5px;
+font-family:Arial;
+height:25px;
+text-align:center;
+padding:6px 0 0;
+}
+
+#ImgNum LI.itemOff {
+background:url(014.gif) no-repeat 50% bottom;
+color:#000;
+}
+
+#ImgNum LI.itemOff:hover {
+color:#a80000;
+}
+
+#ImgNum LI.itemOn {
+font-weight:700;
+background:url(015.gif) no-repeat 50% bottom;
+color:#a80000;
+line-height:25px;
+height:25px;
+padding:8px 0 0;
+}
+
+#ImgNum DIV {
+font-size:12px;
+float:left;
+width:75px;
+cursor:pointer;
+color:#7d98bf;
+line-height:15px;
+height:15px;
+text-align:left;
+margin:10px 0 0;
+padding:8px 0 0;
+}
+
+#TxtBlk {
+float:left;
+width:155px;
+}
+
+#Txt {
+
+background: repeat-x 50% bottom;
+height:295px;
+text-align:left;
+padding:10px 5px 0;
+}
+
+#Txt H2 {
+font-weight:400;
+font-size:18px;
+background:none transparent scroll repeat 0 0;
+color:#5998CC;
+font-family:"ºÚÌå";
+text-align:center;
+padding:1px 0 5px;
+}
+
+#con {
+color:#464444;
+line-height:21px;
+text-align:left;
+}
+
+#date_PN {
+font-size:12px;
+text-align:left;
+}
+
+#date {
+float:left;
+width:155px;
+color:#5c5c5c;
+text-align:center;
+padding:15px 0 0 0px;
+}
+
+
+UL {
+list-style-type:none;
+border-width:0;
+margin:0;
+padding:0;
+}
+
+LI {
+font-size:12px;
+line-height:20px;
+border-width:0;
+margin:0;
+padding:0;
+}
+
+IMG {
+vertical-align:middle;
+border-width:0;
+margin:0;
+padding:0;
+}
+
+DIV {
+font-size:12px;
+line-height:20px;
+}
+
+TEXTAREA {
+font-size:12px;
+}
+
+.clearit {
+clear:both;
+}
+
+A:link {
+color:#039;
+text-decoration:none;
+}
+
+A:hover {
+color:red;
+text-decoration:underline;
+}
+
+.hStyle LI {
+padding-left:12px;
+background:url(011.gif) no-repeat 3px 7px;
+}
+
+.blk01 {
+border-right:#6578a1 1px solid;
+border-top:#6578a1 1px;
+border-left:#6578a1 1px solid;
+border-bottom:#6578a1 1px solid;
+}
+
+.more {
+padding-right:10px;
+font-weight:200;
+font-size:12px;
+float:right;
+}
+
+.picText {
+color:#344f71;
+line-height:20px;
+text-align:left;
+padding:5px 6px 0 0;
+}
+
+.picText IMG {
+border-right:#89a7c6 1px solid;
+border-top:#89a7c6 1px solid;
+float:left;
+border-left:#89a7c6 1px solid;
+border-bottom:#89a7c6 1px solid;
+margin:0 8px;
+}
+
+
+
+.linkEnd {
+border-top:#5d709b 1px solid;
+margin-top:6px;
+background:#f0f5fb;
+border-bottom:#5d709b 1px solid;
+padding:10px 0 10px 15px;
+}
+
+.linkEnd TD {
+background:url(012.gif) no-repeat right 4px;
+line-height:25px;
+text-align:center;
+}
+
+
+
+
+#ss_img_div {
+overflow:hidden;
+width:452px;
+height:302px;
+}
+
+#ss_img_div IMG {
+border-right:#000 1px solid;
+border-top:#000 1px solid;
+border-left:#000 1px solid;
+border-bottom:#000 1px solid;
+}
+
+#Play {
+background:url(016.gif) no-repeat right bottom;
+}
+
+#Pause {
+background:url(017.gif) no-repeat right bottom;
+}
+
+
+
+
+
+#PN {
+background:url(019.gif) no-repeat 50px 9px;
+float:left;
+width:100px;
+padding:11px 0 0;
+}
+
+#PN #pre {
+display:block;
+background:url(020.gif) no-repeat 0 3px;
+float:left;
+width:42px;
+color:#009;
+text-decoration:none;
+padding:0 0 0 8px;
+}
+
+#PN #next {
+display:block;
+background:url(news_pic_ws_009.gif) no-repeat 44px 3px;
+float:left;
+width:44px;
+color:#009;
+text-decoration:none;
+padding:0 0 0 6px;
+}
+
+HTML,OL,FORM,FIELDSET,TABLE {
+border-width:0;
+margin:0;
+padding:0;
+}
+
+P,TD {
+font-size:12px;
+line-height:20px;
+border-width:0;
+margin:0;
+padding:0;
+}
+
+H1,H2,H3,H4,H5,H6 {
+line-height:20px;
+border-width:0;
+margin:0;
+padding:0;
+}
+
+SELECT,INPUT {
+font-size:12px;
+vertical-align:middle;
+}

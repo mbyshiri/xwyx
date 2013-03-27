@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>显示厂商列表</title>
+<script language="javascript">
+function objectTag() {
+var reval,AnnouceNum,ShowType;
+for (var i=0;i<document.form1.ShowType.length;i++){
+var PowerEasy = document.form1.ShowType[i];
+if (PowerEasy.checked==true)
+ShowType = PowerEasy.value
+}
+reval = '{$ShowProducerList('+document.form1.ChannelID.value+','+document.form1.ProducerNum.value+','+document.form1.AuthorType.selectedIndex+','+document.form1.ShowType.selectedIndex+','+document.form1.imgH.value+','+document.form1.imgW.value+','+document.form1.IntroNum.value+','+document.form1.Imgstat.selectedIndex+','+document.form1.ShowMore.value+','+document.form1.ColNum.value+')}';
+window.returnValue = reval;
+window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+  <table width="400" width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+    <tr class='title'>
+      <td colspan="2" align="center"><strong>显示厂商列表</strong></td>
+    </tr>
+    <tr class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>频道ID：</td>
+      <td >
+        <Input name="ChannelID" type="text" size="15" value="1"></td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>厂商显示数量：</td>
+      <td >
+        <Input name="ProducerNum" type="text" size="15" value="5"></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25 class='tdbg5'>厂商分类：</td>
+      <td height=25>
+        <Select  name="AuthorType" >
+         <option value=0 selected>全部</Option>
+         <option value=1>大陆</Option>
+         <option value=2>港台</Option>
+         <option value=3>日韩</Option>
+         <option value=4>欧美</Option>
+        </Select>
+      </td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25 class='tdbg5'>显示方式分类：</td>
+      <td height=25>
+        <Select  name="ShowType" >
+         <option value=0 selected>普通</Option>
+         <option value=1>显示头像及说明</Option>
+         <option value=2>显示头像但不显示说明</Option>
+        </Select>
+      </td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>头像高度：</td>
+      <td >
+        <Input name="imgH" type="text" size="15" value="50"></td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>头像宽度：</td>
+      <td >
+        <Input name="imgW" type="text" size="15" value="50"></td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>说明字数：</td>
+      <td >
+        <Input name="IntroNum" type="text" size="15" value="30"></td>
+    </tr>
+    <tr class=tdbg>
+      <td width="130" align=right height=25 class='tdbg5'>图片与文字的相对位置：</td>
+      <td height=25>
+        <Select  name="Imgstat" >
+         <option value=0 selected>图左</Option>
+         <option value=1>图上</Option>
+         <option value=2>图右</Option>
+         <option value=3>图下</Option>
+        </Select>
+      </td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>"更多"的显示文字：</td>
+      <td >
+        <Input name="ShowMore" type="text" size="15" value="none">当设置为none时不显示</td>
+    </tr>
+    <tr  class='tdbg'>
+      <td align="right" width="30%" class='tdbg5'>显示列数：</td>
+      <td >
+        <Input name="ColNum" type="text" size="15" value="2"></td>
+    </tr>
+    <tr class='tdbg'>
+      <td colspan=2 align='center'>
+        <Input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>

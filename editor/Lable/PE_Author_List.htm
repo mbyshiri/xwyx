@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>显示网站作者照片</title>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table border="0" class='border' cellpadding='2' cellspacing='1'>
+  <tr  class='title' >
+    <td colspan="2" align='center'><strong>显示网站作者列表标签设置：</strong></td>
+  </tr>
+  <tr class=tdbg>
+    <td width="130" align=right height=25>显示方式分类：</td>
+    <td height=25>
+		<Select  name="ShowType" onChange="redirect(this.options.selectedIndex)"> 
+		  <Option value=0 selected>纯文字列表</Option> 
+		  <Option value=1>显示头像及说明</Option>
+		  <Option value=2>直接显示该用户发表文章</Option>
+        </Select> 
+	</td>
+  </tr>
+  <tr class=tdbg>
+    <td width="130" align=right height=25>头像高度：</td>
+    <td><input name="imgH" type="text" size="12" value="50">px</td>
+  </tr>
+  <tr class=tdbg>
+    <td width="130" align=right height=25>头像宽度：</td>
+    <td><input name="imgW" type="text" size="12" value="50">px</td>
+  </tr>
+  <tr class=tdbg>
+    <td width="130" align=right height=25>说明字数：</td>
+    <td><input name="IntroNum" type="text" size="12" value="50"></td>
+  </tr>
+  <tr class=tdbg>
+    <td width="130" align=right height=25>排序方式：</td>
+    <td height=25>
+		<Select id=order  name=order> 
+		  <Option value=0 selected>按验证时间顺排</Option> 
+		  <Option value=1>按验证时间逆排</Option>
+		  <Option value=2>按ID顺排</Option>
+		  <Option value=3>按ID逆排</Option>
+        </Select> 
+	</td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'> </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
+<script language="javascript">
+function objectTag() {
+	var reval;
+	reval = '{$AuthorList('+document.form1.ShowType.selectedIndex+','+document.form1.imgH.value+','+document.form1.imgW.value+','+document.form1.IntroNum.value+','+document.form1.order.selectedIndex+')}';  
+	window.returnValue = reval;
+	window.close();
+}
+
+var groups=document.form1.ShowType.options.length 
+var group=new Array(groups) 
+for (i=0; i<groups; i++) 
+group[i]=new Array() 
+group[0][0]=new Option("按验证时间顺排","0") 
+group[0][1]=new Option("按验证时间逆排","1") 
+group[0][2]=new Option("按ID顺排","2") 
+group[0][3]=new Option("按ID逆排","3") 
+group[1][0]=new Option("按验证时间顺排","0") 
+group[1][1]=new Option("按验证时间逆排","1") 
+group[1][2]=new Option("按ID顺排","2") 
+group[1][3]=new Option("按ID逆排","3") 
+group[2][0]=new Option("按文章ID顺排","0") 
+group[2][1]=new Option("按文章逆排","1") 
+group[2][2]=new Option("按点击数顺排","2") 
+group[2][3]=new Option("按点击数逆排","3")
+
+var temp=document.form1.order 
+function redirect(x){ 
+	for (m=temp.options.length-1;m>0;m--) 
+		temp.options[m]=null 
+		for (i=0;i<group[x].length;i++){ 
+			temp.options[i]=new Option(group[x][i].text,group[x][i].value) 
+		} 
+		temp.options[0].selected=true 
+	} 
+</script>

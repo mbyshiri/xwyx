@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>网站友情链接</title>
+<script language="javascript">
+	function objectTag() {
+	var reval,LinkType,ShowType;
+	for (var i=0;i<document.form1.LinkType.length;i++){
+		var PowerEasy = document.form1.LinkType[i];
+		if (PowerEasy.checked==true)	   
+			LinkType = PowerEasy.value
+		}
+	for (var i=0;i<document.form1.ShowType.length;i++){
+		var PowerEasy = document.form1.ShowType[i];
+		if (PowerEasy.checked==true)	   
+			ShowType = PowerEasy.value
+		}
+	reval = '{$ShowFriendSite('+LinkType+','+document.form1.SiteNum.value+','+document.form1.Cols.value+','+ShowType+')}';  
+	window.returnValue = reval;
+	window.close();
+}
+</script>
+<link href='Admin_Style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<form name="form1">
+<table width='100%' border='0' align='center' align='center' cellpadding='2' cellspacing='1' class='border'>
+  <tr class='title'>
+    <td colspan="2" align="center"><strong>显示网站友情链接标签设置：</strong></td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right">友情链接方式：</td>
+    <td>
+		<input type="radio" name="LinkType" checked value="1">Logo链接
+		<input type="radio" name="LinkType" value="2">文字链接</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right">最多显示站点数：</td>
+    <td><input name="SiteNum" type="text" size="12" value="14">个</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right">分 几 列 显 示：</td>
+    <td><input name="Cols" type="text" size="12" value="2">列</td>
+  </tr>
+  <tr class='tdbg'>
+    <td align="right">链接显示方式：</td>
+    <td>
+		<input type="radio" name="ShowType" value="1">向上滚动<br>
+		<input type="radio" name="ShowType" value="2" checked>横向列表<br>
+		<input type="radio" name="ShowType" value="3">下拉列表</td>
+  </tr>
+  <tr class='tdbg'>
+	<td colspan=2 align='center'><input TYPE='button' value=' 确 定 ' onCLICK='objectTag()'></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
