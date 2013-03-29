@@ -24,27 +24,34 @@ a.class:link {color: #ffffff;}
 a.class:visited {color: #ffffff;}
 a.class:hover{color: #ff0000;}
 a.class:active {color: #ffffff;}
-
+img{border:none;}/*去掉图片在IE中的默认格式即图自动边框*/
+li{list-style:none;}/*去掉列表的默认格式*/
+a{text-decoration:none;}/*设置全局的超链接格式*/
 /* body的css定义:对应css中“body”，可定义内容为网页字体颜色、背景、浏览器边框等 */
 body
 {
 margin:0px;
-font-size: 9pt;background:url(/Skin/ocean/bg_all.gif);
-background-position:center;
+font-size: 12pt;
+background: url(/Skin/ocean/body_bg.gif) repeat-x scroll top;
 text-decoration: none;
 scrollbar-face-color: #f6f6f6;
-scrollbar-highlight-color: #ffffff; scrollbar-shadow-color: #cccccc; scrollbar-3dlight-color: #cccccc; scrollbar-arrow-color: #330000; scrollbar-track-color: #f6f6f6; scrollbar-darkshadow-color: #ffffff;
+scrollbar-highlight-color: #ffffff; 
+scrollbar-shadow-color: #cccccc; 
+scrollbar-3dlight-color: #cccccc; 
+scrollbar-arrow-color: #330000; 
+scrollbar-track-color: #f6f6f6; 
+scrollbar-darkshadow-color: #ffffff;
 }
 /* 单元格的css定义:对应css中的“td”，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
 td
 {
 	font-family:"宋体";
 	font-size: 9pt;
-	line-height: 150%;
 	font-weight: normal;
+	line-height: 150%
 }
 /* 文本框的css定义:对应css中的“input”，这里为文本框的风格设置，可定义内容为背景、字体、颜色、边框等 */
-/*input
+input
 {
 background-color: #ffffff; 
 border-bottom: #666666 1px solid;
@@ -153,7 +160,7 @@ background:url(/Skin/blue/top_nav_menu.gif);color: #0560a6;height: 30;
 {
 	color: #ffffff;
 	height: 22;
-	background-image: url(/Skin/ocean/menu_bg2.gif);
+	background-image: url(/Skin/xuebao/menu_bg2.gif);
 	padding-left: 33px;
 
 }
@@ -171,7 +178,7 @@ color: #037fa8
 .center_tdbgall /* 中部表格总背景颜色定义 */
 {
 background:#ffffff;
-width:770px;
+width:780px;
 }
 　　/* --网页中部左栏的css定义开始-- */
 .left_tdbgall /* 左栏表格总背景颜色定义 */
@@ -185,7 +192,7 @@ background:#ffffff;
 	height: 28px;
 	padding-left:20px;
 	text-align: left;
-	background-image: url(/Skin/ocean/right_t.gif);
+	background-image: url(/Skin/xuebao/links.gif);
 	width: 182px;
 }
 .left_tdbg1 /* 左栏内容表格背景、文字颜色定义 */
@@ -196,7 +203,7 @@ background:#ffffff;
 .left_tdbg2 /* 左栏底部表格背景、文字颜色定义 */
 {
 	height: 10px;
-	background-image: url(/Skin/ocean/tdbg_bottom.gif);
+	background-image: url(/Skin/xuebao/tdbg_bottom.gif);
 	background-repeat: no-repeat;
 }
 .right_title_bs06 /* 右栏标题表格背景、文字颜色定义 */
@@ -206,7 +213,7 @@ background:#ffffff;
 	height: 28px;
 	padding-left:20px;
 	text-align: left;
-	background-image: url(/Skin/ocean/right_t.gif);
+	background-image: url(/Skin/xuebao/right_t.gif);
 }
 .right_title /* 左栏标题表格背景、文字颜色定义 */
 {
@@ -237,7 +244,7 @@ background:url(/Skin/blue/main_top.gif);height: 187;
 .main_title_760i /* 网站首页中栏标题表格背景、文字颜色定义(760) */
 {
 color: ffffff;
-background-image: url(/Skin/ocean/main_bs.gif);
+background-image: url(/Skin/xuebao/main_bs.gif);
 border-right: 1px solid #1c65be;
 text-align: left;padding-left:30;height: 27;
 
@@ -250,7 +257,7 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 {
     font-weight: bold;
 	color: #ffffff;
-	background-image: url(/Skin/ocean/main_bs1.gif);
+	background-image: url(/Skin/xuebao/main_bs.gif);
 	height: 27px;
 	padding-left: 30px;
 	border-right-width: 1px;
@@ -259,19 +266,19 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 }
 .main_title_bs06 /* 中栏标题表格背景、文字颜色定义(bs06) */
 {
-	color: ffffff;
-	text-align: left;
-	padding-left:30px;
-	height: 27px;
-	background-image: url(/Skin/ocean/main_bs.gif);
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: #1c65be;
+	color: #ffffff;
+	text-align: center;
+	height: 33px;
+	background-image: url(/Skin/xuebao/main_bs.gif);
 	font-weight: bold;
+	font-size: 12pt;
+	font-family: "微软雅黑", "黑体", "楷体";
 }
 .main_tdbg_bsd06 /* 中栏内容表格背景、文字颜色定义(bsd06) */
 {
-	color: ffffff;	height: 4px;	background-image: url(/Skin/ocean/main_02.gif);
+	color: #ffffff;	
+	height: 4px;	
+	background-image: url(/Skin/xuebao/main_02.gif);
 }
 .main_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
 {
@@ -285,11 +292,10 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: solid;
-	border-right-color: #aec6e8;
-	border-bottom-color: #aec6e8;
-	border-left-color: #aec6e8;
-	background-image: url(/Skin/ocean/main_bg.gif);
-	background-color: #ffffff;
+	border-right-color: #f7f6e1;
+	border-bottom-color: #f7f6e1;
+	border-left-color: #f7f6e1;
+    background-color: #ffffff;
 }
 .main2_tdbg_bs06 /* 中栏内容表格背景、文字颜色定义(bs06) */
 {
@@ -300,7 +306,7 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 	border-left-width: 1px;
 	border-left-style: dashed;
 	border-left-color: #aec6e8;
-	background-image: url(/Skin/ocean/main_bg.gif);
+	background-image: url(/Skin/xuebao/main_bg.gif);
 	background-color: #ffffff;
 }
 
@@ -310,7 +316,7 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 }
 .main_title_282i,.main_title_282 /* 栏目文章列表标题表格背景、文字颜色定义(282) */
 {
-background:url(/Skin/ocean/main_bs.gif);color: ffffff;height: 27;
+background:url(/Skin/xuebao/main_bs.gif);color: ffffff;height: 27;
 padding-left:30;
 color: ffffff;
 text-align: left;
@@ -328,11 +334,11 @@ border: 1px solid #d2d3d9;line-height: 150%;text-align: left;padding-left:5;padd
 }
 .listbg /* --栏目文章列表内容间隔颜色的定义1-- */
 {
-background:#ffffff;
+/*background:#ffffff;*/
 }
 .listbg2 /* --栏目文章列表内容间隔颜色的定义2-- */
 {
-background:#f7f7f7;
+/*background:#f7f7f7;*/
 }
 　　/* --网页中部中栏的css定义结束-- */
 　　/* --文章显示页的css定义开始-- */
@@ -348,7 +354,8 @@ color: 037fa8;font-weight:bold;line-height: 150%;
 .main_title_760 /* 标题导航表格背景、文字颜色定义(760) */
 {
 
-background:url(/Skin/ocean/main_bs1.gif);border: 1px solid #d2d3d9;height: 28;color: ffffff;
+background:url(/Skin/xuebao/main_bs.gif);border: 1px solid #d2d3d9;height: 28;color: ffffff;
+margin-top: 5px;
 }
 .main_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
 {
@@ -369,7 +376,7 @@ a.guest:active {color: #ffffff;}
 
 .guest_title_760 /* 标题导航表格背景、文字颜色定义(760) */
 {
-background:url(/Skin/ocean/main_bs1.gif);border: 1px solid #d2d3d9;padding-left:5;height: 29;color: ff0000;
+background:url(/Skin/xuebao/main_bs1.gif);border: 1px solid #d2d3d9;padding-left:5;height: 29;color: ff0000;
 }
 .guest_tdbg_760 /* 内容表格背景、文字颜色定义(760) */
 {
@@ -417,7 +424,7 @@ border: 1px solid #cccccc;
 {
     font-weight: bold;
 	color: #ffffff;
-	background-image: url(/Skin/ocean/main_bs1.gif);
+	background-image: url(/Skin/xuebao/main_bs1.gif);
 	height: 27px;
 	padding-left: 30px;
 	border-right-width: 1px;
@@ -509,7 +516,7 @@ border-top-style: solid;border-right-style: solid;border-bottom-style: solid;bor
 border-top-color: #ffffff;border-right-color: #ffffff;border-bottom-color: #bfbfbf;border-left-color: #ffffff;
 }
 .user_line {
-line-height: 1px;background-image: url(/Skin/ocean/line.gif);
+line-height: 1px;background-image: url(/Skin/xuebao/line.gif);
 }
 .user_toolstop/*左区块内标题栏定义*/
 {
@@ -608,7 +615,7 @@ font-size: 12px;
 
 /* ==用户登录框定义== */
 .userbox{
-background:url(/Skin/ocean/login_02b.gif);
+background:url(/Skin/xuebao/login_02b.gif);
 height:93px;
 background-repeat: no-repeat;
 background-position: center center;
@@ -681,14 +688,14 @@ padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
 	border-top-style: none;	border-bottom-style: none;	border-color: #a4c6fc;border-right-style: solid;border-left-style: solid;
 }
 .right_tdbg2 {
-	background-image: url(/Skin/ocean/tdbg_bottom.gif);
+	background-image: url(/Skin/xuebao/tdbg_bottom.gif);
 	background-repeat: no-repeat;
 	height: 10px;
 }
 .main_title_bsf {
 	font-weight: bold;
 	color: #ffffff;
-	background-image: url(/Skin/ocean/main_bs1.gif);
+	background-image: url(/Skin/xuebao/main_bs1.gif);
 	height: 27px;
 	padding-left: 30px;
 	border-right-width: 1px;
@@ -696,26 +703,33 @@ padding: 5px;	background-color: #e6f5ff;	border-width: 1px;
 	border-right-color: #1c65be;
 }
 .mainblinks {
-	background-image: url(/Skin/ocean/links_02.gif);
+	background-image: url(/Skin/ocean/links_bg.jpg);
 	height: 27px;
 	font-weight: bold;
-	color: #ffffff;
+	padding-left: 30px;
+}
+.mainblinks p{
+    margin: 0;
 }
 .menu_bottombg {
 	color: #ffffff;
-	background-image: url(/Skin/ocean/menu_bottombg.gif);
+	background-image: url(/Skin/xuebao/menu_bottombg.gif);
 	height: 31px;
 }
 .bottom_bg {
-	background-image: url(/Skin/ocean/bottom_bg.gif);
+	background-image: url(/Skin/xuebao/bottom_bg.gif);
 }
 .showa {
 	color: #aed2fe;
 }
 .menu_s {
 	color: #ffffff;
-	background-image: url(/Skin/ocean/menu_bg.jpg);
-	height: 26px;
+	font-size: 12pt;
+    font-weight: bolder;
+    font-family: "黑体", "微软雅黑", "楷体", "楷体_GB2312","隶书", "仿宋";
+	background-image: url(/Skin/xuebao/main_menu_bg.gif);
+	height: 39px;
+	
 }
 /* --公告显示文字(滚动条)的css定义开始-- */
 .AnnounceBody2 {color:#ffffff;}
@@ -752,3 +766,108 @@ border: 1px solid #ffffff;
 border-collapse: collapse;
 }
 /* --房产信息列表表格css定义结束--
+/*==文章列表样式==*/
+.main_content_article_list
+{
+    background: #d8e8ff;
+}
+.main_content_article_list table td
+{
+    height: 30px;
+}
+.main_content_article_list table td
+{
+    margin: 5px 0;
+    font-size: 12pt;
+}
+.main_content_tool
+{
+    padding-right: 15px;
+}
+#search_input
+{
+    padding-bottom: 10px;
+}
+.toolbar_title
+{
+    margin-top: 5px;
+    background: url(/Skin/xuebao/toolbar_title_bg.gif);
+    height: 32px;
+    font-family: "黑体";
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    text-align:center;
+}
+.toolbar_title span {
+    display: block;
+    padding-top: 7px;
+    color: #ffffff;
+}
+.footer
+{
+    background:url(/Skin/xuebao/copyright_bg.gif);
+}
+.main_content_tool_list table tr td
+{
+}
+.main_content_article_list
+{
+    font-size: 12pt;
+    line-height: 180%;
+    padding: 10px 20px;
+}
+.main_content_article_list a
+{
+}
+.main_article_title
+{
+    font-family: "黑体","微软雅黑";
+    font-size: 16pt;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.main_article_content p
+{
+    text-indent: 2em;
+    font-size: 12pt;
+    font-family: "楷体","楷体_GB2312","微软雅黑","仿宋","宋体";
+    padding: 0 20px;
+}
+.main_title_800
+{
+    background-image: url(/Skin/xuebao/links.gif);
+    height: 27px;
+    font-weight: bold;
+}
+.main_tdbg_800
+{
+    padding: 5px 20px;
+}
+
+#dhtmlgoodies_slidedown_menu {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#dhtmlgoodies_slidedown_menu a {
+    overflow: hidden;
+    background-image: url("/Skin/ocean/menu_bg.gif");
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    font-weight: lighter;
+    height: 24px;
+    line-height: 26px;
+    text-decoration: none;
+    width: 175px;
+    margin-top: 1px;
+}
+#slideDiv2 a {
+    margin-top:1px;
+    background-image: none;
+    background-color: #afceed;
+    text-align: center;
+}
+.top3 {
+    margin-top: 3px;
+}

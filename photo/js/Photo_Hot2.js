@@ -1,1 +1,1 @@
-document.write("<li>没有热门图片</li>");
+document.write("<li>没有热点媒体</li>");

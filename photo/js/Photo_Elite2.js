@@ -1,1 +1,1 @@
-document.write("<li>没有推荐图片</li>");
+document.write("<li>没有推荐媒体</li>");
