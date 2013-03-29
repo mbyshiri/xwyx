@@ -1,1 +1,1 @@
-document.write("<li>没有热门文章</li>");
+document.write("<li>没有热点文章</li>");
