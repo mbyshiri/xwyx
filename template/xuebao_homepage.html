@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>{$PageTitle}</title>{$Meta_Keywords} {$Meta_Description}
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script src="{$InstallDir}JS/prototype.js"></script>
+    <script src="{$InstallDir}JS/scriptaculous.js"></script>
+    <script src="{$InstallDir}JS/checklogin.js"></script>
+    {$Skin_CSS} {$MenuJS}
+</head>
+<body leftmargin=0 topmargin=0  onmousemove='HideMenu()'>
+<div id="menuDiv" style="z-index: 1000; visibility: hidden; width: 1px; position: absolute;
+    height: 1px; background-color: #9cc5f8">
+</div>
+{$MY_学报首页顶_table}
+<table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background:#E9F2FD;">
+    <tr>
+        <td valign="top" style="border-right: 1px dotted #000000;">
+            <div class="main_content_tool">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="border-right: 1px dotted #000000;">
+                    <tr>
+                        <td>{$MY_首页搜索框_table}</td>
+                    </tr>
+                    <tr>
+                        <td>{$MY_首页登陆框_table}</td>
+                    </tr>
+                    <tr>
+                        <td>{$MY_用户稿件链接_table}</td>
+                    </tr>
+                    <tr>
+                        <td>{$MY_稿件规范_table}</td>
+                    </tr>
+                    <tr>
+                        <td>{$MY_代码查询_table}</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="800" align="center" border="0">
+                <tr>
+                    <td>{$MY_首页最新目次_table}</td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="0" width="800" align="center" border="0">
+                <tr>
+                    <td>{$MY_重点推荐阅读_table}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{$MY_友情链接_table}
+{$MY_学报网页底_table}{$PopAnnouceWindow(400,440)}
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>左侧导航</title>
+</head>
+<body>
+<table id="dhtmlgoodies_slidedown_menu" cellspacing="0" cellpadding="0" width="175" align="center" border="0">
+    <tr><td><a href="/about/Index.asp" class="slMenuItem_depth1" onclick="slideViable(); return false;">关于学会</a></td></tr>
+    <tr style="overflow: hidden; display: none;" id="slideDiv2" class="slideMenuDiv2">
+        <td>
+            <table cellspacing="0" cellpadding="0" width="175" align="center" border="0">
+                <tr><td><a href="/about/ShowArticle.asp?ArticleID=1" class="slMenuItem_depth2">学会简介</a></td></tr>
+                <tr><td><a href="/about/ShowArticle.asp?ArticleID=2" class="slMenuItem_depth2">组织机构</a></td></tr>
+                <tr><td><a href="/about/ShowClass.asp?ClassID=3" class="slMenuItem_depth2">委员介绍</a></td></tr>
+                <tr><td><a href="/about/ShowClass.asp?ClassID=4" class="slMenuItem_depth2">学组介绍</a></td></tr>
+            </table>
+         </td>
+    </tr>
+    <tr><td><a href="/article/Index.asp" class="slMenuItem_depth1">新闻中心</a></td></tr>
+    <tr><td><a href="/tendency/Index.asp" class="slMenuItem_depth1">学科动态</a></td></tr>
+    <tr><td><a href="/conference/Index.asp" class="slMenuItem_depth1">学术会议</a></td></tr>
+    <tr><td><a href="/knowledge/Index.asp" class="slMenuItem_depth1">健康科普</a></td></tr>
+    <tr><td><a href="/educations/Index.asp" class="slMenuItem_depth1">继续教育</a></td></tr>
+    <tr><td><a href="/notes/Index.asp" class="slMenuItem_depth1">启示通知</a></td></tr>
+    <tr><td><a href="/Soft/Index.asp" class="slMenuItem_depth1">文件下载</a></td></tr>
+    <tr><td><a href="/Photo/Index.asp" class="slMenuItem_depth1">媒体中心</a></td></tr>
+    <tr><td><a href="/admin/Admin_Index.asp" class="slMenuItem_depth1">管理入口</a></td></tr>
+    <tr><td><a href="http://www.jnmc.edu.cn" class="slMenuItem_depth1">济宁医学院</a></td></tr>
+</table>
+<script>
+    //设置二级菜单的可见性
+    function slideViable() {
+        var slideDiv = document.getElementById("slideDiv2");
+        var sildeVisibile = slideDiv.style.display;
+        if (sildeVisibile == 'none') {
+            document.getElementById("slideDiv2").style.display = 'block';
+        } else {
+            document.getElementById("slideDiv2").style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>{$PageTitle}</title>
+{$Meta_Keywords}
+{$Meta_Description}
+{$Meta_Keywords_Channel}
+{$Meta_Description_Channel}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script src="{$InstallDir}JS/prototype.js"></script>
+<script src="{$InstallDir}JS/scriptaculous.js"></script>
+<script src="{$InstallDir}JS/checklogin.js"></script>
+{$Skin_CSS} {$MenuJS}
+<script language="JavaScript" type="text/JavaScript">
+    //改变图片大小
+    function resizepic(thispic) {
+        if (thispic.width > 700) thispic.width = 700;
+    }
+    //无级缩放图片大小
+    function bbimg(o) {
+        var zoom = parseInt(o.style.zoom, 10) || 100;
+        zoom += event.wheelDelta / 12;
+        if (zoom > 0) o.style.zoom = zoom + '%';
+        return false;
+    }
+</script>
+</head>
+<body  onmousemove='HideMenu()'> 
+<div id=menuDiv style='Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8'></div> 
+<!-- ********网页顶部代码开始******** -->
+{$MY_动易2006海蓝首页顶}
+<!-- ********网页顶部代码结束******** --> 
+<!-- ********网页中部代码开始******** --> 
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_动易2006海蓝用户登录}</td>
+                    </tr>
+                </table>
+                {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="790" style="overflow: hidden;">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="775" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="55" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <table width="98%" border="0" cellspacing="0" align="center" cellpadding="0" style=" margin-top: 5px; word-break: break-all; Width: fixed">
+                    <tr>
+                        <td class="main_title_575"><b>{$SoftName}{$SoftVersion}</b></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_575" height="100" valign="top">
+                            <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table  bgcolor="#CCCCCC" border="0" cellpadding="2"
+                                cellspacing="1" style="WORD-BREAK: break-all" width="100%">
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%">运行环境：&nbsp;{$OperatingSystem}</td>
+                                    <td width="29%" rowspan="7" align="center" valign="middle" bgcolor="#fffffe">{$SoftPicUrl}</td>
+                                    <td width="26%" bgcolor="#fffffe">文件大小：&nbsp;{$SoftSize}&nbsp;<b>K</b></td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%">软件等级：&nbsp;<font color="#009900">{$Stars}</font></td>
+                                    <td width="26%">软件类别：&nbsp;{$SoftType}</td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%" bgcolor="#fffffe">开 发 商：&nbsp;{$Author}</td>
+                                    <td width="26%">软件语言：&nbsp;{$SoftLanguage}</td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%">相关链接：&nbsp;{$SoftLink}</td>
+                                    <td width="26%">软件属性：&nbsp;{$SoftProperty}</td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%" rowspan="2">下载次数：&nbsp;本日：{$DayHits}　　&nbsp;本周：{$WeekHits}&nbsp;&nbsp;<br>
+                                        &nbsp;&nbsp;本月：{$MonthHits}　&nbsp;　总计：{$Hits}</td>
+                                    <td width="26%">授权方式：&nbsp;{$CopyrightType}</td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td>解压密码：&nbsp;{$DecompressPassword}</td>
+                                </tr>
+                                <tr bgcolor="#fffffe">
+                                    <td width="45%" bgcolor="#fffffe">软件添加：&nbsp;审核:{$Editor}&nbsp;录入:{$Inputer}</td>
+                                    <td width="26%" valign="top" bgcolor="#fffffe">添加时间：&nbsp;{$UpdateTime}</td>
+                                </tr>
+                            </table>
+                            <!--插入广告JS代码-->
+                            <table align="center" border="0" cellpadding="2" cellspacing="0" width="100%">
+                                <tr>
+                                    <td height="8"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left_tdbgall"><b>::<font color="#CC0000">下载地址</font>:: </b></td>
+                                </tr>
+                            </table>
+                            <table align="center" bgcolor="#CCCCCC" border="0" cellpadding="2" cellspacing="1" style="WORD-BREAK: break-all" width="100%">
+                                <tr>
+                                    <td bgcolor="#fffffe" style="LINE-HEIGHT: 16px">{$DownloadUrl}</td>
+                                </tr>
+                            </table>
+                            <table align="center" border="0" cellpadding="2" cellspacing="0" width="100%">
+                                <tr>
+                                    <td height="8"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left_tdbgall"><b>::软件简介::</b></td>
+                                </tr>
+                            </table>
+                            <table align="center" bgcolor="#CCCCCC" border="0" cellpadding="2"
+                                cellspacing="1" style="WORD-BREAK: break-all" width="100%">
+                                <tr>
+                                    <td bgcolor="#fffffe" style="LINE-HEIGHT: 16px">{$SoftIntro}{$Vote}</td>
+                                </tr>
+                            </table>
+                            <table align="center" border="0" cellpadding="2" cellspacing="0" width="100%">
+                                <tr>
+                                    <td height="8"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left_tdbgall"><b>::<font color="#009900">相关软件</font>::</b></td>
+                                </tr>
+                            </table>
+                            <table align="center" bgcolor="#CCCCCC" border="0" cellpadding="2" cellspacing="1" style="WORD-BREAK: break-all" width="100%">
+                                <tr>
+                                    <td bgcolor="#fffffe" style="LINE-HEIGHT: 16px">{$CorrelativeSoft}</td>
+                                </tr>
+                            </table>
+                            <table align="center" border="0" cellpadding="2" cellspacing="0" width="100%">
+                                <tr>
+                                    <td height="8"></td>
+                                </tr>
+                                <tr>
+                                    <td class="left_tdbgall"><b>::下载说明::</b></td>
+                                </tr>
+                            </table>
+                            <table align="center" bgcolor="#CCCCCC" border="0" cellpadding="2" cellspacing="1" style="WORD-BREAK: break-all" width="100%">
+                                <tr>
+                                    <td bgcolor="#fffffe" style="LINE-HEIGHT: 16px"><b>*&nbsp;</b>为了达到最快的下载速度，推荐使用网际快车下载本站软件。
+                                        <br>
+                                        <b>*&nbsp;</b>如果您发现该软件不能下载，请通知<a href="mailto:{$WebmasterEmail}">管理员</a>或点击【<a href="{$InstallDir}{$ChannelDir}/DownError.asp?SoftID={$SoftID}"><font color="#ff000">此处报错</font></a>】，谢谢！
+                                        <br>
+                                        <b>*&nbsp;</b>未经本站明确许可，任何网站不得非法盗链及抄袭本站资源；如引用页面，请注明来自本站，谢谢您的支持！ </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="8"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="main_shadow"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+<!-- ********网页中部代码结束******** --> 
+<!-- ********网页底部代码开始******** -->
+{$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** -->
+</body>
+</html><NOSCRIPT><IFRAME src='*' Width='0' Height='0'></IFRAME></NOSCRIPT><NOSCRIPT><IFRAME src='*' Width='0' Height='0'></IFRAME></NOSCRIPT>

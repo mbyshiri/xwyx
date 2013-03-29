@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>{$PageTitle}</title>
+{$Meta_Keywords}
+{$Meta_Description}
+{$Meta_Keywords_Channel}
+{$Meta_Description_Channel}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.style1 {color: #0099cc}
+-->
+</style>
+<script src="{$InstallDir}JS/prototype.js"></script>
+<script src="{$InstallDir}JS/scriptaculous.js"></script>
+<script src="{$InstallDir}JS/checklogin.js"></script>
+{$Skin_CSS} {$MenuJS}
+<script language="JavaScript" type="text/JavaScript">
+    //改变图片大小
+    function resizepic(thispic) {
+        if (thispic.width > 700) { thispic.height = thispic.height * 700 / thispic.width; thispic.width = 700; }
+    }
+    //无级缩放图片大小
+    function bbimg(o) {
+        var zoom = parseInt(o.style.zoom, 10) || 100;
+        zoom += event.wheelDelta / 12;
+        if (zoom > 0) o.style.zoom = zoom + '%';
+        return false;
+    }
+    //双击鼠标滚动屏幕的代码
+    var currentpos, timer;
+    function initialize() {
+        timer = setInterval("scrollwindow ()", 30);
+    }
+    function sc() {
+        clearInterval(timer);
+    }
+    function scrollwindow() {
+        currentpos = document.body.scrollTop;
+        window.scroll(0, ++currentpos);
+        if (currentpos != document.body.scrollTop)
+            sc();
+    }
+    document.onmousedown = sc
+    document.ondblclick = initialize
+
+    //更改字体大小
+    var status0 = '';
+    var curfontsize = 10;
+    var curlineheight = 18;
+    function fontZoomA() {
+        if (curfontsize > 8) {
+            document.getElementById('fontzoom').style.fontSize = (--curfontsize) + 'pt';
+            document.getElementById('fontzoom').style.lineHeight = (--curlineheight) + 'pt';
+        }
+    }
+    function fontZoomB() {
+        if (curfontsize < 64) {
+            document.getElementById('fontzoom').style.fontSize = (++curfontsize) + 'pt';
+            document.getElementById('fontzoom').style.lineHeight = (++curlineheight) + 'pt';
+        }
+    }
+</script>
+</head>
+<body {$ArticleProtect}>
+<div id=menuDiv style="Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8">
+</div>
+{$MY_动易2006海蓝首页顶}
+<!-- ********网页中部代码开始******** -->
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_动易2006海蓝用户登录}</td>
+                    </tr>
+                </table>
+                {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="790" style="overflow: hidden;">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="780" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="55" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <table class="center_tdbgall" style="word-break: break-all" cellspacing="0" cellpadding="0" width="760" align="center" border="0">
+                    <tr>
+                        <td colspan="2" class="top3 Article_tdbgall" style="padding:5px 10px; margin-top: 10px;">{$ShowPath}</td>
+                    </tr>
+                    <tr valign="center" align="middle">
+                        <td class="main_ArticleTitle" style="overflow:hidden;word-break: break-all" colspan="2" height="50">{$ArticleTitle}</td>
+                    </tr>
+                    <tr valign="center" align="middle">
+                        <td class="main_ArticleSubheading" style=" overflow:hidden; word-break: break-all" colspan="2">{$ArticleSubheading}</td>
+                    </tr>
+                    <tr align="middle">
+                        <td class="Article_tdbgall" colspan="2">{$ArticleInfo}</td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_760" id="fontzoom" style="word-break: break-all" valign="top" colspan="2" height="300">{$GetSubTitleHtml(0,1)}{$ArticleContent} 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Article_tdbgall" align="right" colspan="2">{$ArticleEditor}</td>
+                    </tr>
+                </table>
+                <table class="center_tdbgall"   cellspacing="0" cellpadding="0" width="760" align="center" border="0">
+                    <tr>
+                        <td class="main_shadow"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- ********网页中部代码结束******** -->
+  <!-- ********网页底部代码开始******** -->
+    {$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+<div style="margin-top:20px;">
+	<form name="form2" action="" method="post">
+        <select onchange="FormHeadler()" id="sortid" name="sortid">
+            <option>&nbsp;媒体链接&nbsp;</option>
+            <option value="http://www.jksb.com.cn/">&nbsp;人民网&nbsp;</option>
+            <option value="http://www.jkb.com.cn/">&nbsp;健康报网&nbsp;</option>
+            <option value="http://www.cmt.com.cn/">中国医学论坛报</option>
+            <option value="http://www.yiyaodaobao.com.cn/">&nbsp;中国医药导报&nbsp;</option>
+            <option value="http://www.mdweekly.com.cn/">&nbsp;医师报&nbsp;</option>
+            <option value="http://www.jksb.com.cn/">&nbsp;健康时报网&nbsp;</option>
+            <option value="http://www.39.net/">&nbsp;三九健康&nbsp;</option>
+            <option value="http://www.dxy.cn/cms/">&nbsp;丁香园&nbsp;</option>
+            <option value="http://www.haoyisheng.com/">&nbsp;好医生&nbsp;</option>
+            <option value="http://health.sohu.com/">&nbsp;搜狐健康&nbsp;</option>
+        </select>
+    </form>
+    <script>
+        function FormHeadler() {
+            var url = document.form2.sortid.options[document.form2.sortid.selectedIndex].value;
+            window.location.href = url;
+        }
+    </script>
+</div>
+</body>
+</html>

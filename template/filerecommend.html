@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>{$PageTitle}</title>
+{$Meta_Keywords}
+{$Meta_Description}
+{$Meta_Keywords_Channel}
+{$Meta_Description_Channel}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script src="{$InstallDir}JS/prototype.js"></script>
+<script src="{$InstallDir}JS/scriptaculous.js"></script>
+<script src="{$InstallDir}JS/checklogin.js"></script>
+{$Skin_CSS} {$MenuJS}
+</head>
+<body  onmousemove='HideMenu()'> 
+<div id=menuDiv style='Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8'></div> 
+<!-- ********网页顶部代码开始******** -->
+{$MY_动易2006海蓝首页顶}
+<!-- ********网页顶部代码结束******** --> 
+<!-- ********网页中部代码开始******** --> 
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_动易2006海蓝用户登录}</td>
+                    </tr>
+                </table>
+                {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="790" style="overflow: hidden;">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="775" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="55" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <!--网页中部中栏代码开始-->
+                <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0" class="main_title_575" style="margin-top:5px; word-break: break-all; Width: fixed">
+                    <tr>
+                        <td><b>推荐{$ChannelShortName}列表</b></td>
+                    </tr>
+                </table>
+                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#ffffff" class="main_tdbg_575">
+                    <tr align="center" bgcolor="#D2D3D9">
+                        <td width="284">软件名称</td>
+                        <td width="60">更新日期</td>
+                        <td width="60">软件大小</td>
+                        <td width="60">授权形式</td>
+                        <td width="75">软件等级</td>
+                    </tr>
+                </table>
+                【SoftList(0,0,True,False,True,"",0,3,True,0,200)】
+                <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D2D3D9" style="word-break: break-all; Width: fixed">
+                    <tr bgcolor="#ffffff">
+                        <td width="284" align="left">{$SoftName}{$SoftVersion}</td>
+                        <td width="61" align="center">{$UpdateTime}</td>
+                        <td width="61" align="center">{$SoftSize} <b>K</b></td>
+                        <td width="61" align="center">{$CopyrightType}</td>
+                        <td width="75" align="center"><font color="#009900">{$Stars}</font></td>
+                    </tr>
+                    <tr valign="top" bgcolor="#ffffff">
+                        <td height="50" colspan="5">·{$SoftIntro}</td>
+                    </tr>
+                    <tr align="center" bgcolor="#ffffff">
+                        <td><font color="#009900">运行环境：{$OperatingSystem}</font></td>
+                        <td colspan="2"><font color="#009900">软件类别：{$SoftType}</font></td>
+                        <td colspan="2"><font color="#009900">下载次数：{$Hits}</font></td>
+                    </tr>
+                </table>
+                <table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="8"></td>
+                    </tr>
+                </table>
+                【/SoftList】 {$ShowPage}
+                <table width="98%" border="0" align="center" cellspacing="0" cellpadding="0" style="margin-top:5px; word-break: break-all; Width: fixed">
+                    <tr>
+                        <td class="main_shadow"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_Search">
+                            <table width='100%' border='0' align="center" cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td width="18%" align="center">
+                                        <img src="{$InstallDir}Images/checkarticle.gif" width="15" height="15" align="absmiddle">
+                                        站内{$ChannelShortName}搜索</td>
+                                    <td align="center">
+                                        <script language='JavaScript' type='text/JavaScript' src='{$InstallDir}{$ChannelDir}/JS/ShowSearchForm.js'></script>
+                                    </td>
+                                    <td align='right'><a href='{$InstallDir}{$ChannelDir}/Search.asp'><u>高级搜索</u></a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+    <!--网页中部中栏代码结束-->
+
+            </td>
+        </tr>
+    </table>
+<!-- ********网页中部代码结束******** --> 
+<!-- ********网页底部代码开始******** -->
+{$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** --> 
+</body>
+</html>

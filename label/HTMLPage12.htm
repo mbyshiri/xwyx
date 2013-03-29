@@ -1,0 +1,104 @@
+﻿<html>
+<head>
+<title>{$PageTitle}</title>
+{$Meta_Keywords}
+{$Meta_Description}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+{$Skin_CSS} {$MenuJS}
+</head>
+<body>
+<div id=menuDiv style="Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8"></div>
+  <!-- ********网页中部代码开始******** -->
+  <table class=center_tdbgall cellSpacing=0 cellPadding=0 width=760 align=center border=0>
+    <tr>
+      <td class=left_tdbgall vAlign=top align=left width=180>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td class=left_title align=middle>会 员 信 息</td>
+          </tr>
+          <tr>
+            <td class=left_tdbg1 vAlign=top>
+              <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+                <tr>
+                  <td align=middle>{$UserFace}</td>
+                </tr>
+              </table>
+              <table style="WORD-BREAK: break-all" cellSpacing=0 cellPadding=0 width="100%" border=0>
+                <tr>
+                  <td vAlign=top width=40><B>姓名:</B></td>
+                  <td>{$TrueName}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>性别:</B></td>
+                  <td>{$Sex}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>诞辰:</B></td>
+                  <td>{$BirthDay}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>公司:</B></td>
+                  <td>{$Company}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>部门:</B></td>
+                  <td>{$Department}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>地址:</B></td>
+                  <td>{$Address}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>电话:</B></td>
+                  <td>{$HomePhone}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>传真:</B></td>
+                  <td>{$Fax}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>邮编:</B></td>
+                  <td>{$ZipCode}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>主页:</B></td>
+                  <td>{$HomePage}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>邮件:</B></td>
+                  <td>{$Email}</td>
+                </tr>
+                <tr>
+                  <td vAlign=top width=40><B>ＱＱ:</B></td>
+                  <td>{$QQ}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class=left_tdbg2></td>
+          </tr>
+        </table>
+      </td>
+      <td width=5></td>
+      <td class=main_tdbgall vAlign=top>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td class=main_title_575><B>{$WorksList}</B></td>
+          </tr>
+          <tr>
+            <td class=main_tdbg_575 vAlign=top height=250>{$ItemList(200,0)}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class=main_shadow colSpan=3></td>
+    </tr>
+  </table>
+  <!-- ********网页中部代码结束******** -->
+  <!-- ********网页底部代码开始******** -->
+{$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** -->
+</body>
+</html>

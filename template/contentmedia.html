@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>{$PageTitle}</title>
+{$Meta_Keywords}
+{$Meta_Description}
+{$Meta_Keywords_Channel}
+{$Meta_Description_Channel}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<script src="{$InstallDir}JS/prototype.js"></script>
+<script src="{$InstallDir}JS/scriptaculous.js"></script>
+<script src="{$InstallDir}JS/checklogin.js"></script>
+{$Skin_CSS} {$MenuJS}
+<script language=JavaScript>
+    //改变图片大小
+    function resizepic(thispic) {
+        if (thispic.width > 700) { thispic.height = thispic.height * 700 / thispic.width; thispic.width = 700; }
+    }
+    //无级缩放图片大小
+    function bbimg(o) {
+        var zoom = parseInt(o.style.zoom, 10) || 100;
+        zoom += event.wheelDelta / 12;
+        if (zoom > 0) o.style.zoom = zoom + '%';
+        return false;
+    }
+    var IsPlaying = false;
+    var PhotoIndex = 1;
+    function SlidePlay() {
+        var sTimer, url;
+        if (IsPlaying == false) {
+            IsPlaying = true;
+            SlideButton.value = '停止播放';
+            sTimer = setTimeout("ViewNext()", 2000);
+        } else {
+            clearTimeout(sTimer);
+            IsPlaying = false;
+            SlideButton.value = '幻灯放映';
+        }
+    }
+    function ViewNext() {
+        if (IsPlaying == false) { return false; }
+        if (PhotoIndex < arrUrl.length) {
+            ViewPhoto(arrUrl[PhotoIndex]);
+            PhotoIndex += 1;
+        }
+        if (PhotoIndex >= arrUrl.length) {
+            PhotoIndex = 0;
+        }
+        var iTimeout = interval.value * 1000;
+        if (iTimeout < 1000) { iTimeout = 5000; }
+        sTimer = setTimeout("ViewNext()", iTimeout);
+    }
+</script>         
+</head>
+<body  onmousemove='HideMenu()'>
+<div id=menuDiv style="Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8"></DIV>
+{$MY_动易2006海蓝首页顶}
+  <!-- ********网页中部代码开始******** -->
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_动易2006海蓝用户登录}</td>
+                    </tr>
+                </table>
+                {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="790" style="overflow: hidden;">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="775" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="55" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <table class="center_tdbgall" cellspacing="0" cellpadding="0" width="98%" style="margin-top:5px;" align="center" border="0">
+                    <tr>
+                        <td class="main_title_760" align="middle"><b>{$PhotoName}</b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table cellspacing="5" cellpadding="0" width="100%" border="0">
+                                <tr align="middle">
+                                    <td width="20%">图片作者：{$Author}</td>
+                                    <td width="20%">更新时间：{$UpdateTime}</td>
+                                    <td width="20%">查看次数：{$Hits}</td>
+                                    <td width="20%">推荐等级：<font color="#009900">{$Stars}</font></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left_tdbgall" valign="center" align="middle" height="30">
+                            <input id="Prev" onclick="javascript: window.open('{$PrevPhotoUrl}', '_self');" type="button" value="上一组美图" name="Prev">
+                            <input id="Next" onclick="javascript: window.open('{$NextPhotoUrl}', '_self');" type="button" value="下一组美图" name="Next">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left_tdbgall" valign="center" align="middle" height="400">{$ViewPhoto(800)}</td>
+                    </tr>
+                    <tr>
+                        <td class="left_tdbgall" valign="center" align="middle" height="30">
+                            <input id="Prev" onclick="javascript: window.open('{$PrevPhotoUrl}', '_self');" type="button" value="上一组美图" name="Prev">
+                            <input id="Next" onclick="javascript: window.open('{$NextPhotoUrl}', '_self');" type="button" value="下一组美图" name="Next">
+                            <input id="SlideButton" onclick="SlidePlay();" type="button" value='幻灯放映' name="Prev">
+                            <input id="interval" type="text" size='3' value='5' name="interval" style='text-align: center'>
+                            秒
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Article_tdbgall" align="middle">{$PhotoUrlList}</td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_760">
+                            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                                <tr>
+                                    <td bgcolor="#0089f7"><strong><font color="#ffffff">　图片简介：</font></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>{$PhotoIntro}{$Vote}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  
+  <!-- ********网页中部代码结束******** -->
+  <!-- ********网页底部代码开始******** -->
+{$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** --><NOSCRIPT><IFRAME src="*" width=0 height=0></IFRAME></IFRAME></IFRAME></IFRAME></NOSCRIPT><NOSCRIPT><IFRAME src="*" width=0 height=0></IFRAME></IFRAME></IFRAME></IFRAME></NOSCRIPT><NOSCRIPT><IFRAME src='*' Width='0' Height='0'></IFRAME></NOSCRIPT>
+</body>
+</html>

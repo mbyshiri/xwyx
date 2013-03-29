@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>{$PageTitle}</title>
+    {$Meta_Keywords}
+{$Meta_Description}
+{$Meta_Keywords_Channel}
+{$Meta_Description_Channel}
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script src="{$InstallDir}JS/prototype.js"></script>
+    <script src="{$InstallDir}JS/scriptaculous.js"></script>
+    <script src="{$InstallDir}JS/checklogin.js"></script>
+    {$Skin_CSS} {$MenuJS}
+</head>
+<body onmousemove='HideMenu()'>
+    <div id="menuDiv" style='Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8'></div>
+    <!-- ********网页顶部代码开始******** -->
+   {$MY_动易2006海蓝首页顶}
+    <!-- ********网页顶部代码结束******** -->
+    <!-- ********网页中部代码开始******** -->
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_动易2006海蓝用户登录}</td>
+                    </tr>
+                </table>
+                {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="790" style="overflow: hidden;">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="775" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="55" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+
+                <!--网页中部中栏文章栏目代码开始-->
+                <table width="98%" border="0" cellspacing="0" align="center" cellpadding="0" style=" margin-top:5px; word-break: break-all; Width: fixed">
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="word-break: break-all; Width: fixed">
+                                <tr>
+                                    【ArticleList_ChildClass】【Cols=2】
+                                    <td valign="top" width="284">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td class="main_title_282">
+                                                    <a class='Class' href='{$rsClass_ClassUrl}' title='{$rsClass_Readme}'><b>{$rsClass_ClassName}</b></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="150" valign="top" class="main_tdbg_282">{$GetArticleList(ChannelID,rsClass_arrChildID,True,0,rsClass_ShowAllItem,rsClass_TopNumber,False,False,"",0,rsClass_ItemListOrderType,2,28,0,False,1,True,False,3,False,False,True,True,True,False,rsClass_ItemOpenType)}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="main_shadow"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    【/ArticleList_ChildClass】
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--网页中部中栏文章栏目代码结束-->
+            </td>
+        </tr>
+    </table>
+    <!-- ********网页底部代码开始******** -->
+    {$MY_动易2006海蓝网页底} 
+  <!-- ********网页底部代码结束******** -->
+    <!-- ********弹出窗口代码******** -->
+    {$PopAnnouceWindow(400,440)}
+</body>
+</html>

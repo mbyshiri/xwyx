@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style type="text/css">
+.text_center
+{
+    text-align:center;
+}
+    
+body{
+    background:#ffff00;
+}
+/* 总框架的定义居中及背景 */
+.wallpaper{
+	margin: 0 auto;
+	width: 996px;
+}
+.logo_bg
+{
+    background:url(skin/xuebao/top_bg.gif) no-repeat;
+    height:147px;
+}
+.main_menu
+{
+    height:26px;
+    background:url(skin/xuebao/menu_bg.jpg) repeat-x;
+    padding-top: 2px;
+}
+.menu_text {
+    font-family: "宋体";
+    font-weight: normal;
+    font-size: 9pt;
+    font-weight: normal;
+    padding-top: 6px;
+}
+.menu_bottombg {
+	color: #ffffff;
+	background-image: url(skin/xuebao/menu_bottombg.gif);
+	height: 31px;
+}
+.bottom_bg {
+	background-image: url(skin/xuebao/bottom_bg.gif);
+}
+.login_tool
+{
+    width: 181px;
+    height: 190px;
+}
+.login_main
+{
+    background: url(skin/xuebao/login_02.gif) repeat-y;   
+}
+.login_top
+{
+    height: 35px;
+}
+.login_bottom
+{
+    height: 8px;
+    background:url(skin/xuebao/login_03.jpg) repeat-y;
+}
+#UserLogin
+{
+    font-size:9pt;
+    font-family:"宋体";
+}
+.journal_title
+{
+    background: url("skin/xuebao/main_bs.gif");
+    padding-left: 30px;
+    color:#ffffff;
+    height: 27px;
+}
+.tool_content {
+    float: left;
+    width: 185px;
+}
+.main_content {
+    float: left;
+    width: 800px;
+    margin-left: 10px;
+}
+.content
+{
+    margin:5px 0 0 0;
+}
+.clear
+{
+    clear: both;
+}
+.journal_title_bottom
+{
+    background:url("skin/xuebao/main_02.gif") repeat-x;
+    height: 4px;
+}
+</style>
+</head>
+<body>
+<div class="index_top" >
+    <div class="logo_bg">
+	    <div>{$ShowLogo(213,114)}</div>
+    </div>
+    <div class="main_menu">
+        <div class="menu_text text_center">{$ShowChannel}</div>
+    </div>
+</div>
+<div class="content">
+    <div class="tool_content">
+<div class="login_tool">
+    <div class="login_top"><img src="{$InstallDir}Skin/xuebao/login_01.jpg" alt="login_top" /></div>
+    <div class="login_main" id="login">
+        <div id="UserLogin" class="text_center">
+            <p>载入中…</p>
+            <script language="javascript" type="text/javascript">
+                LoadUserLogin('{$InstallDir}', 0, 2);
+            </script>
+        </div>
+    </div>
+    <div class="login_bottom"><!--<img src="{$InstallDir}Skin/xuebao/login_03.jpg" alt="login_top" />--></div>
+</div>
+    </div>
+    <div class="main_content">
+<div class="journal_new">
+    <p class="journal_title">学报2012年 第5期 目次</p>
+    <div class="journal_title_bottom"></div>
+    <div class="journal_new_text">
+        <!--{$GetArticleList(1,0,true,0,0,7,false,false,"",0,3,2,30,0,true,6,true,false,0,false,false,false,true,true,false,0,1,,,,)}-->
+    </div>
+</div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+    <table width="100%" cellspacing="5">
+        <tbody>
+            <tr align="center" class="tdbg">
+                <td width="154"><a title="中华人民共和国卫生部"target="_blank" href="http://www.moh.gov.cn">
+                    <img width="154" height="42" border="0" src="/images/links/1yq.jpg"></a></td>
+                <td width="154"><a title="中国科学技术协会" target="_blank" href="http://www.cast.org.cn/">
+                    <img width="154" height="42" border="0" src="/images/links/2yq.jpg"></a></td>
+            </tr>
+            <tr align="center" class="tdbg">
+                <td width="154"><a title="中华医学会" target="_blank" href="http://www.cma.org.cn">
+                    <img width="154" height="42" border="0" src="/images/links/3yq.jpg"></a></td>
+                <td width="154"><a title="中国医师协会" target="_blank" href="http://www.cmda.gov.cn/">
+                    <img width="154" height="42" border="0" src="/images/links/4yq.jpg"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

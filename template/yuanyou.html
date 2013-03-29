@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <!--<table cellSpacing=0 cellPadding=0 width=778 align=center border=0>
+    <tr>
+      <td vAlign=top>
+        <table cellSpacing=0 cellPadding=0 width="100%" border=0>
+          <tr>
+            <td style="BACKGROUND-POSITION: center center; BACKGROUND-IMAGE: url(Images/hdpic.gif); BACKGROUND-REPEAT: no-repeat;" align=middle width=214>
+            <!--{$GetSlidePicArticle(1,arrChildID,false,0,4,false,false,30,1,208,150,30,5000,-1)}-->
+    </td>
+            <td align="middle">
+                <table cellspacing="0" cellpadding="0" width="360" border="0">
+                    <tr>
+                        <td class="main_title_bs06">新闻中心</td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bsd06"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" valign="top" height="170">
+                            <!--{$GetArticleList(0,0,false,0,0,11,false,false,"",0,3,4,56,0,false,6,true,false,0,false,false,false,true,true,false,0,3,,,,)}-->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+    </tr>
+          <tr>
+              <td colspan="2" height="5"></td>
+          </tr>
+    <tr>
+        <td colspan="2">
+            <table class="main_Search" cellspacing="0" cellpadding="0" width="98%" align="center" border="0">
+                <tr>
+                    <td align="middle">
+                        <img height="30" src="{$InstallDir}Skin/Ocean/search_s.gif" width="119"></td>
+                    <td align="middle">
+                        <table cellspacing="0" cellpadding="0" width="100%">
+                            <tr valign="center">
+                                <script>
+                                    function search4() {
+                                        if (websearch.google.checked)
+                                            window.open("http://www.google.com/search?hl=zh-CN&inlang=zh-CN&ie=GB2312&oe=GB2312&q=" + websearch.key.value, "mspg6");
+                                        if (websearch.baidu.checked)
+                                            window.open("http://www1.baidu.com/baidu?tn=verywind&word=" + websearch.key.value, "mspg9");
+                                        if (websearch.sina.checked)
+                                            window.open("http://search.sina.com.cn/cgi-bin/search/search.cgi?_searchkey=" + websearch.key.value, "mspg0");
+                                        if (websearch.yahoo.checked)
+                                            window.open("http://www.yisou.com/search?p=" + websearch.key.value, "mspg2");
+                                        return false;
+                                    }
+                                </script>
+                                <form name="websearch" onsubmit="return(search4())">
+                                    <td align="middle" height="25">关键字： 
+  <input size="12" name="key">
+                                        <input type="submit" value="搜索" name="submit">
+                                        <input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type="checkbox" checked value="baidu" name="baidu">
+                                        <a href="http://www.baidu.com/" target="_blank">百度</a>
+                                        <input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type="checkbox" checked value="google" name="google">
+                                        <a href="http://www.google.com/" target="_blank">google</a>
+                                        <input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type="checkbox" value="sina" name="sina">
+                                        <a href="http://cha.sina.com.cn/" target="_blank">新浪</a>
+                                        <input style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" type="checkbox" value="yahoo" name="yahoo">
+                                        <a href="http://www.yahoo.com.cn/" target="_blank">Yahoo</a> </td>
+                                </form>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="main_shadow"></td>
+    </tr>
+    </table>
+      </td>
+      <td valign="top">{$MY_动易2006海蓝用户登录} </td>
+    </tr>
+  </table>
+  <table cellspacing="0" cellpadding="0" width="778" align="center" border="0">
+      <tr>
+          <td valign="top">
+              <table id="main_s" cellspacing="0" cellpadding="0" width="583" align="center" border="0">
+                  <tr>
+                      <td class="main_title_bs06 ">频道一最新文章</td>
+                      <td class="main_title_bsf">频道二最新文章</td>
+                  </tr>
+                  <tr>
+                      <td class="main_tdbg_bsd06"></td>
+                      <td class="main_tdbg_bsd06"></td>
+                  </tr>
+                  <tr>
+                      <td class="main_tdbg_bs06" colspan="2" height="138">
+                          <table height="138" cellspacing="0" cellpadding="0" width="100%" border="0">
+                              <tr>
+                                  <td valign="top">
+                                      <!--{$GetArticleList(1,0,true,0,0,7,false,false,"",0,3,2,30,0,true,6,true,false,0,false,false,false,true,true,false,0,1,,,,)}-->
+                                  </td>
+                                  <td class="main2_tdbg_bs06" valign="top" width="50%">
+                                      <!--{$GetArticleList(1,0,true,0,0,7,false,false,"",0,3,2,30,0,true,6,true,false,0,false,false,false,true,true,false,0,1,,,,)}-->
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" height="5"></td>
+                  </tr>
+              </table>
+              <table id="main_s" cellspacing="0" cellpadding="0" width="583" align="center" border="0">
+                  <tr>
+                      <td class="main_title_bs06 ">专题一最新文章</td>
+                      <td class="main_title_bsf">专题二最新文章</td>
+                  </tr>
+                  <tr>
+                      <td class="main_tdbg_bsd06"></td>
+                      <td class="main_tdbg_bsd06"></td>
+                  </tr>
+                  <tr>
+                      <td class="main_tdbg_bs06" colspan="2" height="138">
+                          <table height="138" cellspacing="0" cellpadding="0" width="100%" border="0">
+                              <tr>
+                                  <td valign="top">
+                                      <!--{$GetArticleList(1,0,True,1,True,7,False,False,"",0,3,2,30,0,True,1,True,False,0,False,False,False,True,True,False,0)}-->
+                                  </td>
+                                  <td class="main2_tdbg_bs06" valign="top" width="50%">
+                                      <!--{$GetArticleList(1,0,True,2,True,7,False,False,"",0,3,2,30,0,True,1,True,False,0,False,False,False,True,True,False,0)}-->
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" height="5"></td>
+                  </tr>
+              </table>
+          </td>
+          <td valign="top" width="186">
+              <table id="bs1" cellspacing="0" cellpadding="0" width="182" border="0">
+                  <tr>
+                      <td class="right_title_bs06">聚 合 空 间</td>
+                  </tr>
+                  <tr>
+                      <td class="right_tdbgbs06" valign="top" height="138">{$ShowspaceList(4,0,1,false,false,60,50,14,2,-空间首页-,2)}</td>
+                  </tr>
+                  <tr>
+                      <td class="right_tdbg2"></td>
+                  </tr>
+              </table>
+              <table id="bs1" cellspacing="0" cellpadding="0" width="182" border="0">
+                  <tr>
+                      <td class="right_title_bs06">热 门 图 文</td>
+                  </tr>
+                  <tr>
+                      <td class="right_tdbgbs06" valign="top" height="138">
+                          <!--{$GetPicArticle(0,0,True,0,3,false,True,0,3,2,130,90,20,0,True,1)}-->
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="right_tdbg2"></td>
+                  </tr>
+              </table>
+          </td>
+      </tr>
+  </table>
+    <table cellspacing="0" cellpadding="0" width="778" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="main_Search" cellspacing="0" cellpadding="0" width="98%" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input type="radio" checked value="Article" name="ModuleName">
+                                文章 
+  <input type="radio" value="Soft" name="ModuleName">
+                                下载 
+  <input type="radio" value="Photo" name="ModuleName">
+                                图片 
+  <input id="Keyword" maxlength="50" value="关键字" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                                <input id="Field" type="hidden" value="Title" name="Field"></td>
+                        </tr>
+                    </form>
+                </table>
+                <table id="main_s" cellspacing="0" cellpadding="0" width="583" align="center" border="0">
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_title_bs06 ">最新图片</td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bsd06"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" valign="top" height="103">
+                            <!--{$GetPicPhoto(3,0,True,0,4,False,False,0,1,1,130,90,20,0,True,4)}-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                </table>
+                <table id="main_s" cellspacing="0" cellpadding="0" width="583" align="center" border="0">
+                    <tr>
+                        <td class="main_title_bs06 ">下载更新</td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bsd06"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" height="138">
+                            <table height="138" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                <tr>
+                                    <td valign="top" width="50%">
+                                        <!--{$GetSoftList(2,0,True,0,True,9,False,False,"",0,3,2,30,0,True,1,False,3,False,False,True,True,False,1)}-->
+                                    </td>
+                                    <td class="main2_tdbg_bs06" valign="top">
+                                        <!--{$GetPicSoft(2,0,True,0,4,false,false,0,3,2,80,60,12,0,True,2)}-->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="5"></td>
+                    </tr>
+                </table>
+                <table id="main_s" cellspacing="0" cellpadding="0" width="583" align="center" border="0">
+                    <tr>
+                        <td class="main_title_bs06 " width="50%">论坛新贴</td>
+                        <td class="main_title_bsf"><strong>最新留言</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bsd06"></td>
+                        <td class="main_tdbg_bsd06"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" colspan="2" height="138">
+                            <table height="138" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                <tr>
+                                    <td valign="top" width="50%">
+                                        <!--<IMG alt='#[!script src="http://bbs.powereasy.net/newtopic.asp?boardid=all&lock=0&bname=0&tlen=20&n=8&sdate=1&orders=2&info=3&action=1&reply=0"!]
+                                                                                                                                                            [!/script!]#' src="/editor/images/jscript.gif" border=0 $>-->
+                                        请修改网站首页模板中调用论坛新贴的代码。 </td>
+                                    <td class="main2_tdbg_bs06" valign="top" width="50%">
+                                        <script src="guestbook/newguest.asp?KindId=0&KindName=1&num=8&tlen=13&order=0&info=0">
+                                        </script>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" height="5"></td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top" width="186">
+                <table id="bs1" cellspacing="0" cellpadding="0" width="182" border="0">
+                    <tr>
+                        <td class="right_title_bs06">用 户 排 行</td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbgbs06" valign="top" height="138">{$ShowTopUser(5)}</td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbg2"></td>
+                    </tr>
+                </table>
+                <table id="bs1" cellspacing="0" cellpadding="0" width="182" border="0">
+                    <tr>
+                        <td class="right_title_bs06">网 站 统 计</td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbgbs06" valign="top" height="138">{$ShowSiteCountAll} 
+            <script src="count/CounterLink.asp?style=simple"></script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbg2"></td>
+                    </tr>
+                </table>
+                <table id="bs1" cellspacing="0" cellpadding="0" width="182" border="0">
+                    <tr>
+                        <td class="right_title_bs06">最 新 调 查</td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbgbs06" valign="top" height="50">{$ShowVote}</td>
+                    </tr>
+                    <tr>
+                        <td class="right_tdbg2"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table cellspacing="0" cellpadding="0" width="778" align="center" bgcolor="#ffffff" border="0">
+        <tr>
+            <td>
+                <table height="27" cellspacing="0" cellpadding="0" width="774" align="center" border="0">
+                    <tr>
+                        <td width="29">
+                            <img height="27" alt="" src="{$InstallDir}Skin/Ocean/links_01.gif" width="29"></td>
+                        <td class="mainBlinks">
+                            <p>友情链接</p>
+                        </td>
+                        <td width="9">
+                            <img height="27" alt="" src="{$InstallDir}Skin/Ocean/links_03.gif" width="9"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+                    <tr>
+                        <td>{$ShowFriendSite(1,14,7,2,0,0,88,False,True,0)}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    -->
+</body>
+</html>

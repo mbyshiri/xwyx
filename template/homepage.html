@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>{$PageTitle}</title>
+    {$Meta_Keywords}
+{$Meta_Description}
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script src="{$InstallDir}JS/prototype.js"></script>
+    <script src="{$InstallDir}JS/scriptaculous.js"></script>
+    <script src="{$InstallDir}JS/checklogin.js"></script>
+    {$Skin_CSS} {$MenuJS}
+</head>
+<body leftmargin="0" topmargin="0" onmousemove='HideMenu()'>
+    <div id="menuDiv" style="Z-INDEX: 1000; VISIBILITY: hidden; WIDTH: 1px; POSITION: absolute; HEIGHT: 1px; BACKGROUND-COLOR: #9cc5f8">
+    </div>
+    {$MY_动易2006海蓝首页顶}
+    <table cellspacing="0" cellpadding="0" width="996" align="center" border="0" style="background: #E9F2FD;">
+        <tr>
+            <td valign="top" width="200" style="border-right: 2px solid #afceed;">
+                    <table cellspacing="0" cellpadding="0" align="center" border="0" style="">
+                        <tr>
+                            <td>{$MY_动易2006海蓝用户登录}</td>
+                        </tr>
+                    </table>
+                    {$MY_左侧导航菜单}
+            </td>
+            <td valign="top" width="600">
+                <table class="main_Search top3" cellspacing="0" cellpadding="0" width="570" align="center" border="0">
+                    <form name="search" action="search.asp" method="post">
+                        <tr>
+                            <td width="120">
+                                <img height="29" src="{$InstallDir}Skin/Ocean/search_s2.gif" width="114"></td>
+                            <td align="middle">
+                                <input id="Keyword" maxlength="50" size="50" name="Keyword">
+                                <input id="Submit" type="submit" value="·搜索·" name="Submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                <table class="top3" cellspacing="0" cellpadding="0" width="570" align="center" border="0">
+                    <tr>
+                        <td><img height="43" src="{$InstallDir}skin/ocean/newszx.jpg" width="570"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" valign="top" height="220">
+                            <!--{$GetArticleList(1,0,True,0,ShowAllItem,0,False,False,"",0,ItemListOrderType,2,60,0,True,1,True,True,3,False,False,False,True,True,True,ItemOpenType)}-->
+                        </td>
+                    </tr>
+                </table>
+                <table class="top3" cellspacing="0" cellpadding="0" width="570" align="center" border="0">
+                    <tr>
+                        <td><img height="43" src="{$InstallDir}skin/ocean/xkdt.jpg" width="570"></td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbg_bs06" valign="top" height="220">
+                            <!--{$GetArticleList(1003,0,True,0,ShowAllItem,0,False,False,"",0,ItemListOrderType,2,60,0,True,1,True,True,3,False,False,False,True,True,True,ItemOpenType)}-->
+                        </td>
+                    </tr>
+                </table>
+                {$MY_动易2006海蓝友情链接}
+            </td>
+            <td valign="top" width="190">
+                <table cellspacing="0" class="top3" cellpadding="0" align="center" border="0" style="width: 185px; border: 1px solid #f7f6e1;">
+                    <tr>
+                        <td>{$MY_右侧滚动图片}</td>
+                    </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" class="top3" align="center" border="0" style="width: 185px; border: 1px solid #f7f6e1;">
+                    <tr>
+                        <td>{$MY_右侧杂志期刊}</td>
+                    </tr>
+                </table>
+                <table cellspacing="0" cellpadding="0" class="top3" align="center" border="0" style="">
+                    <tr>
+                        <td>{$MY_媒体链接}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+{$MY_动易2006海蓝网页底} {$PopAnnouceWindow(400,440)}
+</body>
+</html>
