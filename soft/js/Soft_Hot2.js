@@ -1,1 +1,1 @@
-document.write("<li>没有热门软件</li>");
+document.write("<li>没有热点文件</li>");
