@@ -1,0 +1,1 @@
+document.write("<option value='1'>学会简介</option><option value='2'>组织结构</option><option value='3'>委员介绍</option><option value='4'>学组介绍</option>");

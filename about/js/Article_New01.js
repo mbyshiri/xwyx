@@ -1,0 +1,1 @@
+document.write("&nbsp;[<a class=\"\" href=\"/about/ShowClass.asp?ClassID=1\">学会简介</a>]<a class=\"\" href=\"/about/ShowArticle.asp?ArticleID=1\" title=\"中华医学会行为医学分会\" target=\"_self\">中华医学会行为医学分会</a>&nbsp;(<font color=\"red\">03-28</font>)<img src=\"/images/new.gif\" alt=\"最新介绍\"><br />");
