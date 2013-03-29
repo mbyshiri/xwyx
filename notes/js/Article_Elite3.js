@@ -1,0 +1,1 @@
+document.write("<li>没有推荐通知</li>");

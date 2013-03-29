@@ -1,0 +1,1 @@
+document.write("<li>没有热点通知</li>");
